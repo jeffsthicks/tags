@@ -1,0 +1,19 @@
+%tag:000E
+%label:def:aInfinityAlgebra
+%author:JeffHicks
+%name:"$A_\infty$ algebra"
+%type:definition
+
+ 
+ 
+An \emph{$A_\infty$} algebra $(A, m^k_A)$ is a free graded $\mathbb{k}$-module $A^\bullet$ equipped with multilinear  products 
+\[
+    m^k:(A^\bullet)^{\otimes k}\to (A^{\bullet+2-k})
+\]
+for each $k>1$. These are required to satisfy the quadratic filtered $A_\infty$ relationship
+\[
+    0=\sum_{k_1+k'+k_2=k} (-1)^{\clubsuit(\underline x, k_1)} (m^{k_1+1+k_2})\circ (\operatorname{id}^{\otimes k_1}\otimes m^{k'}\otimes id^{\otimes k_2}) (x_1, \cdots ,x_k)
+\]
+The sign is determined by $\clubsuit(\underline x,k_1):= k_1+\sum_{j=1}^{k_1} \deg(x_j)$.
+
+ 

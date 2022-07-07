@@ -1,0 +1,15 @@
+%tag:0007
+%label:exm:cotangentBundleIsLiouville
+%author:JeffHicks
+%name:"Liouville structure on the cotangent bundle"
+%type:example
+%parent:def:liouvilleDomain
+
+
+    Let $Q$ be a manifold. The cotangent bundle $X=T^*Q$ is an exact symplectic manifold; call the primitive $\lambda_{can}=\sum_{i=1}^np_idq_i$. In local coordinates, the Liouville vector field is $Z= \sum_{i=1}^n p_i \partial p_i$. The flow of this vector field acts by scalar multiplication on the fibers of $T^*Q$,
+    \begin{align*}\phi^t: T^*Q\to T^*Q && (q, p) \mapsto (q, tp)\end{align*}
+    which inflates the symplectic form.
+
+    Now equip $Q$ with a metric $g$. The metric determines a unit sphere bundle $S^*Q\subset T^*Q$, which is transverse to $V$. Letting $\alpha=\lambda|_{S^*Q}$ makes  $(S^*Q, \alpha)$ a contact manifold. The time $t$-flow on  $(S^*Q, \alpha)$ corresponds to the time $t$ geodesic flow on the base (\cref{exr:geodesicsInSymplecticCohomology}). It is known (\cite{fet1952variational}) that every closed manifold has at least 1 closed geodesic, so all of these examples of contact manifolds have a Reeb orbit. 
+
+

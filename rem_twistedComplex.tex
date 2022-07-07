@@ -1,0 +1,36 @@
+%tag:000R
+%label:rem:twistedComplex
+%author:JeffHicks
+%name:"properties of twisted complexes"
+%type:remark
+
+ 
+
+
+    One viewpoint on twisted complexes is that they give \emph{deformations} of (direct sums of) objects of our categories. In the simplest case --- the mapping cone of chain map $f: A\to B$, the differential on $\cone(f)$ has the form 
+    \[d_{\cone(f)}=\begin{pmatrix} d_A & 0 \\ 0 & d_B \end{pmatrix} + \begin{pmatrix} 0 & 0\\ f & 0\end{pmatrix}\]
+    where the first term is the differential on $A\oplus B[1]$, and the second term ```deforms'' the differential on this chain complex.
+
+    Twisted categories extend this story in several directions: firstly, we expand the set of deformations so that the objects we consider are chain complexes up to homotopy, and we allow deformations of the product (and not only differential) structure.
+
+    With regards to the first point: Suppose that we have a (not necessarily exact) sequence of chain complexes $A\xrightarrow{f} B \xrightarrow{g} C$. The total complex of this sequence will not be a chain complex (as $g\circ f \neq 0$). However, to build a twisted complex from this data we will only need that $g\circ f$ is homotopic to zero. Suppose that  $H:A\to C[1]$ is a homotopy (so that $d_AH+Hd_C=g\circ f$). Then  
+    \[\delta = \begin{pmatrix}
+        0 & 0 & 0\\
+        f & 0 & 0\\
+        H & g & 0
+    \end{pmatrix}\]
+    gives us the structure of a twisted complex on $A\oplus B[1]\oplus C[2]$.
+
+    For the second point: Let $(A, m^k)$ be an $A_\infty$ algebra. There are a particularly nice class of deformations of $A_\infty$ governed by elements $a\in A^1$ satisfying the Maurer-Cartan equation:
+    \[m^1(a)+m^2(a\otimes a)+m^3(a\otimes a \otimes a)+\cdots =0.\]
+    In order for this equation to make sense, one needs show that the sum converges. This is usually achieved by asking that $A$ be filtered and that $m^k(a^{\otimes k})$ lies increasingly positive filtration levels.
+    When one can make sense of this equation, we can define a new $A_\infty$ algebra, $(A, m^k_a)$ whose product is defined by 
+    \[m^k_a:=\sum_{n>0}\sum_{j_0+\cdots+j_k=n} m^{k+n}(a^{\otimes j_0}\otimes \id \otimes a^{\otimes j_1}\otimes \id \cdots \otimes a^{\otimes j_{k-1}}\otimes \id \otimes a^{\otimes j_k})\]
+
+    Now consider the setting where $C$ is a chain complex, and $A=\hom(C, C)$. Then $a\in A^1$ corresponds to a map $a: C\to C[1]$, and the Maurer-Cartan equation has two terms:
+    \begin{itemize}
+        \item The first term $m^1(a) = d_A a + a d_A$. The vanishing of this term states that $a$ is a chain map;
+        \item The vanishing of the second term $m^2(a, a)$ tells us that $a$ squares to zero (so that it gives a differential).
+    \end{itemize}
+    The combination of these two terms checks the condition that $(d_A+a)\circ (d_A+a)=0$; that is that we can deform the differential by $a$.
+ 

@@ -1,0 +1,31 @@
+%tag:000Y
+%label:art:viterbosTheorem
+%author:JeffHicks
+%name:"Viterbo's theorem"
+%type:article
+
+    One of the most striking computations for symplectic cohomology comes from Viterbo's theorem, which relates the symplectic cohomology of $T^*Q$ with the homology of the free loop space $\mathcal L Q$.
+    \input{def_freeLoopSpace}
+    We usually regard the Hamiltonian Floer cohomology of $X$ as being ``inspired'' by doing Morse theory on the free loop space of $\Omega X$. However, it is \emph{not} the Morse theory on the loop space, which can actually be done!
+
+    From the data of $g$ a metric for $Q$, we can define an energy functional on the space of loops of Sobelov class $W^{1,2}$,
+    \begin{align*}
+        E: \mathcal LQ\to \RR\\
+        \gamma\mapsto \int_{\gamma}|\gamma'|^2_gdt,
+    \end{align*}
+    whose critical points are either constant loops or $g$-geodesics on $Q$. 
+    This functional is only Morse-Bott for generic metrics (observe that every geodesic can be reparameterized) but still satisfies the property that the critical submanifolds have finite index. Therefore, the downward flow spaces of each critical submanifold is a finite dimensional submanifold, and the union of all such manifolds recovers the homotopy type of $\mathcal LQ$. Additionally, there is an honest gradient flow of $E$ --- that is, from a given loop $\gamma$ we can construct a unique $E$-gradient flow-line starting at $\gamma$. Since the gradient of $E$ points inwards along its level sets,  $CM_\bullet(\mathcal LQ, E)$ computes the \emph{homology} of the loop space.
+
+    Given $(X, \omega, J)$ a symplectic manifold, the Floer action functional \cref{eqn:floerAction} does not have critical points of finite index or co-index --- so there are no well defined downward flow spaces, and no absolute index. Even worse, the gradient ``flow'' of the Floer action functional is not well defined (in that we don't have unique 1-dimensional families of solutions given an intial starting parameter). However, the space of gradient flow-lines between two critical points is still well-behaved, which is enough to get a ``Morse-like'' cohomology theory from $A_{H_t}:\mathcal L X \to \RR$.
+
+    Despite these apparent differences, there is a scenario where we can translate Floer theory to study the homology of the loop space. Let $(Q, g)$ be a Riemannian manifold. Let $B^*Q$ be the unit cotangent ball. This is a Liouville domain (depending on the choice of metric $g$), whose contact boundary $(S^*Q, \alpha)$ has Reeb orbits corresponding to the $g$-geodesics of $Q$ (\cref{exr:geodesicsInSymplecticCohomology}). So, it seems reasonable to  conjecture a relation between 
+    \[\text{Floer functional $A_{H}:\mathcal L(T^*Q)\to \RR$}\Leftrightarrow\text{Energy functional $E:\mathcal Q\to \RR$}\]
+
+    We also have the suggestive relations between cohomology theories which we know how to compute:
+    \input{dig_viterboSuggestive}
+    where the bottom arrow is inclusion of $Q\into \mathcal LQ$ by the constant loops, and the top right arrow is given by \cref{prp:homologyIncludesIntoSH}. From these pieces of evidence one might expect the following theorem. 
+
+    \input{thm_viterbosTheorem}
+
+    \input{app_viterboVanishing}
+

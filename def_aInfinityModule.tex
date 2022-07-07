@@ -1,0 +1,19 @@
+%tag:000E
+%label:def:aInfinityModule
+%author:JeffHicks
+%name:"$A_\infty$ module"
+%type:definition
+
+ 
+ 
+Let $(A, m^k_A)$ be  an \emph{$A_\infty$} algebra. A $A-\text{Mod}$  $(M, m^{k|1}_{A|M})$ is a free graded $\mathbb{k}$-module $M^\bullet$ equipped with multilinear  products 
+\[
+    m^{k|1}:(A^\bullet)^{\otimes k}\otimes M\to (M^{\bullet+1-k})
+\]
+for each $k\geq 0$. These are required to satisfy the quadratic  $A_\infty$ relationships:
+\begin{align*}
+    0=&\sum_{\substack{ j_1+j+j_2=k_1+1\\ j_1+j\leq k_1 }} m_{A|M}^{k_1-j+1|1}\circ ( \operatorname{id}_A^{\otimes j_1}\otimes m^{j}_A \otimes \operatorname{id}^{\otimes k_1-j_1-j}\otimes \operatorname{id}_M})\\
+    &+\sum_{\substack{ j_1+j+j_2=k_1+1\\j_1\leq k_1\leq j_1+j-1}} m_{A|M}^{j_1|1} \circ (\operatorname{id}_A^{\otimes j_1}\otimes m_{A|M}^{k_1-j_1|1})
+\end{align*}
+
+ 

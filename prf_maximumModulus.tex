@@ -1,0 +1,19 @@
+l%tag:000T
+%label:prf:maximumModulus
+%author:JeffHicks
+%name:"maximum modulus principle"
+%type:proof
+%parent:lem:maximumModulus
+
+ 
+    It suffices to prove this for maps with domain $D\subset \CC^n$, and $f: D\to \CC$. Write $f=u+\jmath v$. In a small neighborhood of the point $z$, we can write  $f=\exp(h)$.
+    Observe that 
+    \[
+        \Delta \ln|f|=&\Delta \ln|\exp(h)|=u\\
+        =& \sum_{i=1}^n \partial_{x_i}^2 u+ \partial_{y_i}^2 u\\
+        =& \sum_{i=1}^n \partial_{x_i}\partial_{y_i}v - \partial_{y_i}\partial_{x_i} v =0
+    \]
+    Therefore $\ln|f|$ is a harmonic function.  
+
+    We now prove the weak maximum principle for harmonic functions. Let $h: U\subset \RR^n\to \RR$ be a harmonic function. For $s\in \RR_{>0}$ we construct the function  $h+s\cdot e^{x_1}$. This now satisfies the property that $\Delta(h+e^{x_1})>0$ everywhere, and not all of the 
+ 

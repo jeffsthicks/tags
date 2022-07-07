@@ -1,0 +1,18 @@
+%tag:000T
+%label:app:weinsteinConjectureInRn
+%author:JeffHicks
+%name:"Weinstein conjecture for hypersurfaces in $\RR^n$"
+%type:application
+%parent:prp_homologyIncludesIntoSH
+
+\begin{application}
+\label{app:weinsteinConjecture}
+We look at an application of \cref{prp:homologyIncludesIntoSH}. 
+Let $X$ be a Liouville domain, and suppose that $(\partial X, \alpha)$ has no Reeb orbits. Then the map from \cref{prp:homologyIncludesIntoSH} is an isomorphism 
+\[H^\bullet(X)\to \SH(X).\]
+Therefore, we can compute $\SH(X)$ to show that $(\partial X)$ has a Reeb orbit.  
+
+\input{exm_SHofBall}
+
+A generalization of this result (due to \cite{oancea2003suite}) states that whenever $X$ is a Stein domain (\cref{exm:steinDomain}) is subcritical (so the Morse indexes of the critical points of $\phi: X\to \RR$ are all less than $n$) then $\SH(X)=0$. 
+\end{application}

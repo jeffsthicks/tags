@@ -1,0 +1,23 @@
+%tag:0001
+%label:rem:topologicalMappingCone
+%author:JeffHicks
+%name:"some properties of topological mapping cone"
+%type:remark
+%parent:0000
+
+ 
+    In the homotopy category of pointed spaces, the mapping cone takes a special meaning. Let $f: (X,x)\to (Y, y)$ be a pointed map. From this we can form $(Z, z):=(\cone(f), y)$ which is again a pointed space. We now address some relations between spaces $(X, x), (Y, y)$ and $(Z, z)$.
+\begin{itemize}
+    \item Observe that the composition \(i\circ f: (X, x)\to (Z, x))\) is homotopic to the constant map. In the homotopy category of pointed spaces, we can therefore write $i\circ f \sim 0$, where $0: (X, x)\to (Z, x)$ is the map factoring through a point.
+    \item We can additionally look at the cone  
+    \[(Y, y)\xrightarrow{i}(Z, z).\]
+    This second cone can be rewritten in terms of the data $f, X$ and $Y$ as
+    \[ (Y\times J)\cup ((X\times I)\cup Y / \sim\]
+    where the relations are 
+    \[(x_1, 0)\sim (x_2, 0) , (x, 1)\sim f(x)) , (y_1, 0)\sim (y_2, 0), (y, 1)\sim y.\]
+    This is homotopic to the \snip{suspension}{def:suspension} $\Sigma X$ allowing us to write the ``long exact sequence''
+    \[(X, x)\to (Y, y)\to (Z, z)\to (\Sigma X, x)\to (\Sigma Y, y)\to \cdots\]
+    in the homotopy category of pointed spaces.
+\end{itemize}
+
+ 

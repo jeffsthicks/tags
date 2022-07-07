@@ -1,0 +1,38 @@
+%tag:0008
+%label:def:triangulatedCategory
+%author:JeffHicks
+%name:"triangulated Category"
+%type:definition
+
+ 
+ 
+A triangulated category is an \emph{additive} category $\mathcal C$, along with the structure of 
+\begin{itemize}
+    \item an additive automorphism $\Sigma: \mathcal C\to \mathcal C$, called the \emph{shift functor} and
+    \item a collection of \emph{triangles}, which are triples of objects and morphisms written as 
+    \[A\xrightarrow{f} B \xrightarrow{g} C\xrightarrow{h} \Sigma A.\]
+\end{itemize}
+Denote by $X[n]=\Sigma^nX$.
+This data is required to satisfy the axioms for a triangulated category,
+\begin{description}
+    \item[TR1], concerning which triangles must exist:
+    \begin{itemize} 
+        \item The triangle $X\xrightarrow{\id} X\to 0 \to \Sigma X$ is an exact triangle
+        \item  For every morphism $f:X\to Y$ there exists an object (called the cone) so that $X\to Y \to \cone(f)$ is an exact triangle
+        \item Every triangle which is isomorphic to an exact triangle is exact.
+    \end{itemize}
+    \item[TR2], concerning the interchange between exact triangles and suspension. If $X\xrightarrow{f} Y \xrightarrow{g} Z\xrightarrow{h} X[1]$ is an exact triangle, then so are $Y\to Z\to X[1]\to Y[1]$ and $Z[-1]\to X\to Y\to Z$.
+    \item[TR3] Given a commutative square, if we complete the rows to exact triangles, then there exists a morphism between the third objects making everything commute.
+    \item[TR4] The octahedral axiom, which states that given exact triangles
+    \begin{align*}
+        X\xrightarrow{f} Y \xrightarrow{g} Z'\xrightarrow{h} X[1]\\
+        Y\xrightarrow{i} Z \xrightarrow{j} X'\xrightarrow{k} Y[1]\\
+        X\xrightarrow{i\circ f} Z \xrightarrow{l} Y'\xrightarrow{m} Z[1]
+    \end{align*}
+    There exists a triangle $Z'\to Y'\to X'\to Z'[1]$.
+    making the diagram of these triangles commute.
+\end{description}
+ 
+
+
+ 

@@ -1,0 +1,21 @@
+%tag:0007
+%label:exm:nonadmissibleHeegaardDiagram
+%author:JeffHicks
+%name:"Heegaard diagrams for $S^2\times S^1$"
+%type:example
+
+
+    We look at the example of $M=S^2\times S^1$. Observe that $S^2=D^2\cup_{S^1} D^2$, so we can write $M=D^2\times S^1 \cup_{\Sigma_1} D^2\times S^1$. 
+    The Heegaard diagram $(\Sigma_1, \alpha, \beta)$ consists of a torus with two meridional cycles. 
+    \input{fig_nonAdmissibleHeegaardDiagram}
+    If the diagram is chosen so that $\alpha, \beta$ are disjoint, then the Lagrangian intersection Floer cohomology $\HF(\alpha, \beta)$ vanishes.
+    \input{fig_admissibleHeegaardDiagram}
+    However, if the diagram is chosen so that $\alpha, \beta'$ intersect transversely, the Lagrangian intersection Floer cohomology (with $\ZZ/2\ZZ$ coefficients) is $\ZZ/2\ZZ\oplus \ZZ/2\ZZ$. Note that $\beta'$ can be chosen so that it is Hamiltonian isotopic to $\beta$.
+    
+    The discrepancy between these two answers comes from the non-convergence of the homotopy between the composition of continuation maps  $f\circ g:\CF(\alpha, \beta')\to \CF(\alpha, \beta) \to \CF(\alpha, \beta')$ and $\id: \CF(\alpha, \beta')$ over $\ZZ/2\ZZ$ coefficients. The presence of an annulus between $\alpha, \beta$ is the culprit for the non-convergence.
+
+    If one instead chooses to use Novikov (instead of $\ZZ/2\ZZ$ coefficients) one can obtain a 
+
+    To rule out this phenomenon, we only look at strips which avoid the marked point $z$, and will impose a criterion (admissible Heegaard diagrams) which will, in this setting, preclude the existence of annuli disjoint from the marked point $z$.  In general, the admissibility criterion will limit us to configurations of cycles for which the number of holomorphic strips contributing to the Floer differential is finite.
+
+

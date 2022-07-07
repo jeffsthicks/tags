@@ -1,0 +1,25 @@
+%tag:0013
+%label:exr:geodesicsInSymplecticCohomology
+%author:JeffHicks
+%name:"geodesics and symplectic cohohomology of the cotangent bundle"
+%type:exercise
+
+ 
+ \label{exr:geodesicsInSymplecticCohomology}
+Let $(Q, g)$ be a Riemannian manifold. 
+\begin{enumerate}
+    \item Describe a metric on $ g^*:T^*_qQ\to T^*_qQ$ on the cotangent bundle. In local coordinates $(q, p)$ for $T^*Q$,  write down the Hamiltonian vector field $V_g$ associated to the Hamiltonian $H(q, p):=g_q^*(p, p): T^*_qQ\to \RR$.
+    \item Recall that a geodesic on $Q$ is a curve $\gamma:\RR\to Q$ which is locally length minimizing. In particular, it is a minimizer for the action 
+    \[E(\gamma)=\frac{1}{2}\int_a^b g_{\gamma(t)}(\dot \gamma(t), \dot \gamma(t)) dt\]
+    for every $a,b\in \RR$. Prove that if $\hat \gamma: \RR\to T^*Q$ is a flow-line of $V_g$, that $\gamma:=\pi_Q(\hat \gamma)$ is a geodesic.
+    \item Let $n>1$. Use the Serre spectral sequence for the fibration\todo{Write down what I mean by $\Omega$, $P$, etc} 
+    \[\Omega S^n\to PS^n\to S^n\]
+    to conclude that $H_*(\Omega S^n)\simeq \ZZ[x]$. Here, $\Omega M$ is the based loop space of $M$, and $PM$ is the based path space of $M$. The element $x$ is of degree $n-1$ and is determined by 
+    \[H_n(S^n)\to \pi_n(S^n)\to \pi_{n-1}(\Omega S^n)\to H_{n-1}(\Omega S^n).\]
+    \item Let $n>1$. Using the Serre spectral sequence for the fibration 
+    \[\Omega S^n\to LS^n\to S^n\]
+    show that as a vector space $H_*(LS^n)\neq 0, \ZZ/n\ZZ$ or $\ZZ^2$. Here, $LM$ is the free loop space of $L$.
+    \item Show that if there exists a metric $g$ for $S^n$ which has no closed geodesics, that there exists a Hamiltonian $H: S^n\to \RR$ which has no non-constant orbits, and two constant orbits. Conclude that every metric on $S^n$ has at least one closed geodesic.
+\end{enumerate}
+
+ 

@@ -1,0 +1,23 @@
+%tag:000X
+%label:con:symplecticCohomologyLimit
+%author:JeffHicks
+%name:"$\SH(X)$ as a limit"
+%type:construction
+
+
+    As before, let $(X, \lambda)$ be a Liouville domain. For $m\not\in \ell(\Gamma)$ not a period of a Reeb orbit, define 
+    \[\SH(X)^{< m}:=\HF(\hat X, H^m_t)\]
+    where $H^m_t$ is a Hamiltonian which on the symplectization agrees with $H^m$, the linear Hamiltonian of slope $m$. 
+    Over the symplectization $\RR\times \partial X$ there are no Hamiltonian orbits, as $H^m$ has no Hamiltonian orbits. The $< m$ signifies that this version of symplectic cohomology is only supposed to detect those Reeb orbits of period less than $m$.
+
+    In order to recover the symplectic cohomology, we would like to understand the limit of the groups $SH(X)^{< m}$ as we take $m\to\infty$. Making sense of a limit algebraically requires constructing maps between these groups. When $m^+< m^-$, the maximum principle arguments applied to families of Hamiltonians dependent on the $s$-parameter hold, allowing us to construct chain maps 
+    \[\CF(\hat X, H^{m^+}_t)\to \CF(\hat X, H^{m^-}_t)\]
+    The $\pm$ index on the slope are meant to represent whether they are the ingoing or outgoing side of a Floer trajectory, not the relative sizes of the slopes. From the perspective of \cref{con:symplecticCohomologyQuadratic}, the set of Hamiltonian orbits corresponding to Reeb orbits of period less than $m^+$ is a subcomplex of the set of Reeb orbits of period less than $m^-$. Intuitively, the Floer trajectory should decrease the action associated to the Reeb vector field, which is the period of the Reeb orbit.
+    \input{fig_limitHamiltonian}
+
+    Consider now an increasing sequence of slopes $m_0< m_1< \cdots $ which are not the periods of any Reeb orbits of $\partial X$. One can form the telescope complex
+    \input{dig_symplecticCohomologyTelescope}
+    where the vertical maps are the identity, and the diagonal maps are continuations.
+    \input{prp_homologyOfTelescope}
+    We could therefore also define
+    \[SH(X):=\lim_{i\to\infty} \SH(X)^{< m^i}.\]

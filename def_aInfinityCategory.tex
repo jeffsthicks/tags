@@ -1,0 +1,24 @@
+%tag:000G
+%label:def:aInfinityCategory
+%author:JeffHicks
+%name:"$A_\infty$ category"
+%type:definition
+
+ 
+ 
+An \emph{$A_\infty$} category $\mathcal A$ is the data of 
+\begin{itemize}
+    \item A collection of objects $\text{Ob}(\mathcal A)$,
+    \item For each pair of objects $A_0, A_1$ a graded free module $\hom^\bullet(A_0, A_1)$,
+    \item For each sequence of objects $A_0, \ldots , A_k$, a composition map
+\[
+    m^k:\hom(A_{k-1}, A_k)\otimes \cdots \otimes \hom(A_0, A_1)\to \hom(A_0, A_k)[2-k]
+\]
+for each $k>1$. These are required to satisfy the quadratic filtered $A_\infty$ relationship
+\[
+    0=\sum_{k_1+k'+k_2=k} (-1)^{\clubsuit(\underline x, k_1)} (m^{k_1+1+k_2})\circ (\operatorname{id}^{\otimes k_1}\otimes m^{k'}\otimes id^{\otimes k_2}) (x_1, \cdots ,x_k)
+\]
+The sign is determined by $\clubsuit(\underline x,k_1):= k_1+\sum_{j=1}^{k_1} \deg(x_j)$.
+
+ 
+ 

@@ -1,0 +1,23 @@
+%tag:000X
+%label:con:dehnTwist
+%author:JeffHicks
+%name:"construction of the symplectic dehn twist"
+%type:construction
+
+
+    Fix the standard metric $g$ on $S^n$, and let $B_r^*S^{n}$ be the radius  $r$ conormal ball of $S^n$. 
+    We first describe a symplectomorphism of $B_r^*S^n$.
+    Consider the function 
+    \begin{align*}
+        f: B_r^*S^{n}\to& \RR\\
+        (q, p) \mapsto& \pi|p|_g.
+    \end{align*}
+    The function $f^2$ is a smooth map on $B_r^*S^n$, and the Hamiltonian flow of $f^2$ is the geodesic flow. 
+    This is a smooth function on $B^*_rS^n\setminus S^n$. 
+    On the symplectic manifold $B^*_rS^n\setminus S^n$ the time one flow of $f$ is the antipodal map on the $S^n$ base. 
+    We take a smooth function $\rho: \RR\to \RR$ with the property that $\rho \circ f = f^2$ when $f< \epsilon$, $\rho\circ f=f$ when $f>r-\epsilon$, and $\rho$ is increasing. 
+    Let $H= \rho \circ f: B^*_rS^n\to \RR$, and let $\phi_H: B_r^*S^n\to B_r^*S^n$ be the time-one Hamiltonian isotopy of $H$. 
+    Finally, let $-\id: S^n\to S^n$ the antipodal map, which extends to a symplectomorphism $-\id: B_r^*S^n\to B_r^*S^n$. 
+    Define $-\phi_H:=-\id\circ \phi_H$. 
+    Observe that the map $-\phi_H: S^n\to S^n$ is a symplectomorphism of $B_r^*{S^n}$, which acts by the identity in a neighborhood of $S_r^*S^{n}$.
+    It acts by the antipodal map on the zero section.

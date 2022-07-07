@@ -1,0 +1,22 @@
+%tag:000Z
+%label:exr:biranCornea3ended
+%author:JeffHicks
+%name:"surgery triangle from Lagrangian cobordism"
+%type:exercise
+
+ 
+ 
+Let $X$ be a compact symplectic manifold. Recall that a \emph{3-ended Lagrangian cobordism} $K: (L_0, L_1)\rightsquigarrow L_2$ is a closed Lagrangian submanifold $K\subset X\times \CC$ with the property that there exists a compact subset $U\subset \CC$ so that \[K|_{\pi_\CC^{-1}(\CC\setminus U)}=((L_0\times \RR_{>0})\cup( L_1\times (\sqrt{-1}+\RR_{>0}) )\cup( L_2\times (\RR_{<0})))|_{\pi_\CC^{-1}(\CC\setminus U)}.\]
+Suppose that $X$ is an exact symplectic manifold, which in turn makes $X\times \CC$ an exact symplectic manifold. Let $K$ be an exact 3-ended Lagrangian cobordism. 
+    \input{figures/3EndedLagrangianCobordism.tikz}
+\begin{enumerate}
+    \item Show that $L_0, L_1$ and $L_2$ are exact Lagrangian submanifolds in $X$.
+    \item Consider the curve $\gamma^-\subset \CC$. Show that for any exact Lagrangian submanifold $L\subset X$, $\CF(L\times \gamma^-, K)=\CF(L, L_0)$ as a vector space. 
+    \item Give $X\times \CC$ an almost complex structure of the form $J_X\times J_\CC$. Suppose that we have a pseudoholomorphic strip $u: \RR\times [0, 1]\to X\times \CC$ with $u(t, 0)\in L\times \gamma^-$ and $u(t, 1)\in K$. Show that $\pi_\CC(u)\in \text{Im}(\gamma^-)\cap \RR_{<0}$ (the location of the red cross in the figure). From this, conclude that if $J_X$ is chosen so that all pseudoholomorphic strips with boundary on $L, L_2$ are regular, that $\CF(L\times \gamma^-, K) = \CF(L_2, K)$ \emph{as chain complexes}.
+        \input{figures/3EndedLagrangianCobordismGammaMinus.tikz}
+    \item Consider now the curve $\gamma^+\subset \CC$. Using a similar argument, one can prove that there are no pseudoholomorphic strips $u:\RR\times [0, 1]\to X\times \CC$ with $\lim_{t\to\infty} u(s, t)=z_2$ and $\lim_{t\to-\infty} u(s, t)=z_0$. What can you conclude about the relationship between $\CF(L\times \gamma^+, K)$, $\CF(L, L_0)$ and $\CF(L, L_1)$?
+        \input{figures/3EndedLagrangianCobordismGammaPlus.tikz}
+    \item Observe that $L\times \gamma^-$ and $L\times \gamma^+$ are Hamiltonian isotopic. Exhibit a long exact sequence whose terms are $\HF(L, L_0), \HF(L, L_1)$ and $\HF(L, L_2)$.
+\end{enumerate}
+
+ 

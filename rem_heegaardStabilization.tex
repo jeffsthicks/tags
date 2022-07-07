@@ -1,0 +1,8 @@
+%label:rem:heegaardStabilizations
+%author:JeffHicks
+%name:"Morse interpretation of Heegaard stabilization"
+%type:remark
+%parent:def:heegaardStabilization
+
+One way to see that stabilization of a Heegaard diagram produces the same manifold comes from Morse theory. Consider $\Sigma_g$ as the level set of a self-indexing Morse function $f$. Suppose that we wanted to modify our Morse function to $\tilde f$ by adding in a pair of critical points $p, q$ so that $\ind(p)=1$ and $\ind(q)=2$. We imagine that the critical points would appear on opposite sides of $\Sigma_g$, and be connected by a single flow line. Furthermore, $\tilde \Sigma_{g+1}=\tilde f(1.5)$, the new level set, would be of genus $g+1$. By applying surgery along either the attaching circles $W^\downarrow(p)\cap \tilde \Sigma_{g+1}$ or $W^\uparrow(q)\cap \tilde \Sigma_{g+1}$, we obtain $\Sigma_g$. See \cref{fig:heegaardStabilization}.
+\input{fig_heegaardStabilization}

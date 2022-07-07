@@ -1,0 +1,58 @@
+%label:con:heegaardFloer
+%author:JeffHicks
+%name:"construction of Heegaard Floer complex"
+%type:construction
+
+Let $(\Sigma_g, \underline{\alpha}, \underline{\beta})$ be a Heegaard diagram. Let $X=\Sym^g(\Sigma_g)$. Consider the real submanifolds
+\begin{align*}
+    L_{\underline \alpha}:=\{[(z_1, \ldots, z_g)]\in X\;|\; z_i\in \alpha_i\} && 
+    L_{\underline \beta}:=\{[(z_1, \ldots, z_g)]\in X\;|\; z_i\in \beta_i\}
+\end{align*}
+Since the $\alpha_i$ are disjoint from one another, this gives a smooth submanifold whose topology is $T^g$. Furthermore, since each of the $\alpha_i$ is a real subspace of $\Sigma_g$, the submanifold $L_\alpha$ is a real submanifold of $\Sigma_g$. A similar statement holds for $L_\beta$. \Cite{perutz2008handleslide} shows that $\Sym^g(\Sigma_g)$ can be equipped with a symplectic form which makes $L_{\underline \alpha},L_{\underline \beta}$ Lagrangian submanifolds. 
+
+We would wish to define the Heegaard-Floer cohomology as the Lagrangian intersection Floer cohomology of $L_{\underline \alpha},L_{\underline \beta}$. However, this is not an invariant of Heegaard diagrams --- note that isotopies of Heegaard diagrams give isotopies of Lagrangian submanifolds, while Lagrangian intersection Floer cohomology is only invariant under \emph{Hamiltonian isotopies} of Lagrangian submanifolds. We given an example exhibiting some of the problems with this preliminary approach.
+
+\input{exm_nonadmissibleHeegaardDiagram}
+
+
+Despite that from the outset this does not appear to be an invariant of Heegaard diagrams, let us proceed. 
+We introduce a slight generalization of a Heegaard diagram. 
+\input{def_basedHeegaardDiagram}
+A similar theorem to \cref{thm:heegaardMoves} holds for based Heegaard diagrams.
+As a vector space, the Heegaard Floer cohomology of the based Heegaard diagram $(\Sigma,\underline{\alpha}, \underline{\beta},z)$ is
+\[\HeF(\Sigma, \underline{\alpha}, \underline{\beta},z):=\bigoplus_{x\in L_{\underline \alpha}\cap L_{\underline{\beta}}} \ZZ/2\ZZ\langle x\rangle.\]
+The differential is defined in a manner similar to the Lagrangian intersection Floer cohomology, but we will need to overcome the following difficulties.
+
+\begin{itemize}
+    \item Gromov-Compactness: Observe that this is defined over $\ZZ/2\ZZ$ coefficients. In general, when we look at the strips connecting two points $x, y$, we are only guaranteed compactness of the moduli space of pseudoholomorphic strips which have bounded energy. To get around this problem --- when strips from $x$ to $y$ have possibly unbounded energy --- we would employ Novikov coefficients in Lagrangian intersection Floer cohomology. Here, we do not use such a coefficient ring. 
+    \item  If we treat $X$ as a symplectic manifold, the Lagrangian submanifolds $L_{\underline \alpha}, L_{\underline \beta}$ are not tautologically unobstructed (i.e. $\omega(\pi_2(X, L))\neq 0$). We therefore must rule out disk and sphere bubbling to show that the differential squares to zero.
+\end{itemize}
+
+The choice of base point defines a subset $Y_z\subset X$ given by  
+\[ Y_z:=\{[(z, z_2, \ldots, z_g)] \st z_i\in \Sigma_g\} \subset X\]
+which is disjoint from $L_{\underline \alpha}\cup L_{\underline \beta}$. 
+
+For $x, y\in L_{\underline \alpha}\cap L_{\underline \beta}$ let $\mathcal M(x, y)$ denote the moduli space of holomorphic strips with boundary on $L_{\underline \alpha}\cup L_{\underline \beta}$, and ends limiting to $x$ and $y$. Let $\mathcal M(x, y)_{z=0}^0$ be the zero-dimensional component of $\mathcal M(x, y)$ consisting of strips which are disjoint from $Y_z$. The differential of Heegaard Floer cohomology is defined by the structure coefficients
+\[\langle d_zx , y \rangle = \#\mathcal M(x, y)_{z=0}^0.\]
+The following lemmas rule out the presence of disk and sphere bubbling.
+\input{lem_heegaardNoSpheres}
+\input{lem_heegaardNoDisks}
+Provided that we can show that $(d_z)^2=0$, the Heegaard-Floer cohomology is defined to be the homology of the chain complex
+\[\HHeF(M):= H^\bullet(\HeF(\Sigma, \underline \alpha, \underline \beta ,z), d_z).\]
+ Without further work, one cannot show that the map $d_z$ defined above gives a differential due to the following problems.
+To demonstrate the necessity of addressing these problems, we give an example:
+As a result of these two lemmas, our restriction to counting disks which \emph{do not} pass through $Y_z$ gives us a differential on the Floer cohomology. However, it remains to show that the differential converges (Gromov Compactness) and that it is invariant under Lagrangian isotopies which avoid the marked point. 
+In order to obtain a replacement for the symplectic form providing a bound on the energy of holomorphic strips, we need to work a little bit harder. The key insight is that there is a dictionary between holomorphic strips in the symmetric product and maps from more-complicated domains to the surface.
+\input{prp_intersectionsInSymmetricProducts}
+This means that we can understand the intersections between our Lagrangians $L_{\underline \alpha}, L_{\underline \beta}$ in terms of the intersections between the collection of cycles. Remarkable, we can also understand the holomorphic strips between the intersections points by looking at data on $\Sigma_g$. 
+\input{thm_stripsInSymmetricProducts}
+With this relation, we can ``by hand'' rule out the kinds of problematic disks which would interfere with the arguments of Gromov-compactness.
+\input{def_heegaardFloerDomain}
+\input{def_periodicHeegaardFloerDomain}
+    Every periodic domain can be represented by a surface with boundary $\hat D\to \Sigma$, thus every periodic domain $\mathcal D$ gives a homology class $H_2(M; \ZZ)$ by gluing the attaching disks associated to each of the $\alpha_i, \beta_j$ to the appropriate boundaries in $\hat D$. We call this homology class $H(\mathcal D)$.
+\input{def_weaklyAdmissibleHeegaardDiagram}
+The following lemma may give us some intuition for where the admissibility condition enters into the definition of Heegaard-Floer cohomology.
+\input{lem_heegaardAdmissibleZeroArea}
+\input{lem_heegaardAdmissibleFiniteStrips}
+This shows that the symplectic energy of the holomorphic strips that we consider in the definition of the differential $d_z$ is bounded. 
+

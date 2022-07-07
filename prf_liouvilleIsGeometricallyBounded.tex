@@ -1,0 +1,33 @@
+%tag:000T
+%label:prf:liouvilleIsGeometricallyBounded
+%author:JeffHicks
+%name:"Liouville manifolds are geometrically bounded"
+%type:proof
+%parent:prp:liouvilleIsGeometricallyBounded
+%source:biasedseidel2006biased
+
+ 
+      Let $u: \RR\times S^1\to \RR$ be a solution to the Floer equation (\cref{eqn:floerEquation}). Let $\rho=\exp(r\circ u)$.  By applying $d(\exp(r))$ to the Floer equation, and using \cref{def:contactTypeACS} we obtain :
+      \begin{align*}
+         0=d(\exp(r))\circ \left(\partial_s u + J(\partial_t u - V_{H})\right)=& \partial_s(\exp(\rho)) - \alpha(\partial_t u)+ \alpha(V_H)
+         \intertext{Because $H= h(\rho)$, the Hamiltonian vector field associated to $H$ is $h'(\rho) V_\alpha$, where $V_\alpha$ is the Reeb flow. From \cref{rem:increasingHamiltonian}, we see that $\alpha(V_H)=h'(\rho).$}
+         =& \partial_s(\rho) - \alpha(\partial_t u)+ h'(\rho) .
+      \end{align*}
+      Similarly, applying $\alpha$ to the Floer equation:
+      \begin{align*}
+         0=\alpha  \left(\partial_s u + J(\partial_t u - V_{H})\right) =& \alpha(\partial_su)+ \partial_t(\exp(\rho))+ V_{H}(\exp(\rho))
+         \intertext{Because $H= h(\rho)$ has the same level sets as $\rho$,  $V_H(\rho)=0$. }
+         =& \alpha(\partial_s u) + \partial_t(\rho)
+      \end{align*}
+      Differentiating the first line with respect to $s$,  the second line with respect to $t$, and summing the lines together  we obtain 
+      \begin{align*}
+        0=&  (\partial_s^2 + \partial_t^2)\circ \rho- \partial_s\alpha(\partial_t u)+\partial_s \rho h'(\rho) +\partial_t\alpha(\partial_s u)\\
+        \intertext{As $[\partial_s, \partial_t]=0$, we can substitue $-\partial_t\alpha(\partial_s u)+ \partial_s\alpha (\partial_t u)= -u^*\omega(\partial_s, \partial_t)$ }
+        =& \Delta \rho- u^*\omega(\partial_s, \partial_t)+ \rho h'(\rho)\partial_s\rho + \rho h''(\rho) \partial_s\rho\\
+        \intertext{By again applying Floer's equation, and using the compatibility of almost complex structure with $J$, we may substitue $u^*\omega(\partial_s, \partial_t)= u^*\omega(\partial_s, J\partial_t-X_H)=|\partial_s u^2|-dh'(\rho)\partial_s$ }
+        =& \Delta \rho-|\partial_s|^2+\rho h''(\rho)\partial_s\rho 
+      \end{align*}
+      We therefore obtain that $\Delta\rho+\rho\cdot h''(\rho) \partial_s\rho\geq 0$. 
+
+      Observe now that where $z\in S^1\times \RR$ is a proposed maximum for $\rho$ that $\partial_s\rho=0$, allowing us to write $(\partial^2_s \rho + \partial^2_t \rho)|_z \geq 0$. This implies that at least one of $\partial^2_s, \partial^2_s$ has to be non-negative --- in particular, the second derivative test does not detect the maximum. A more general argument --- the maximum principle --- states that $\rho$ achieves no local maxima; therefore $\sup_{S^1\times \RR} \rho \leq \max_{t\in S^1} \exp(r\circ \gamma_\pm)=:C.$ It follows that the image of $u$ is contained in $\hat X|_{\rho< C}$, which is a compact set.
+ 

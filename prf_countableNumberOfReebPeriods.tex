@@ -1,0 +1,16 @@
+%tag:000T
+%parent:prp:countableNumberOfReebPeriods
+%label:prf:countableNumberOfReebPeriods
+%author:JeffHicks
+%name:"periods of Reeb orbits"
+%type:proposition
+
+    Give a Reeb orbit, the repamareterization of the orbit satisfying $\dot \gamma = \ell V_\alpha$ is a critical point of the action 
+    \begin{align*}
+        A:W^{1,2}(S^1, M)\to& \RR\\
+        \gamma\mapsto& \int_{\gamma}\alpha
+    \end{align*}
+    where $W^{1,2}(S^1, M)$ is the space of maps of Sobelov class $1,2$.
+    On a Reeb orbit, observe that 
+    \[\int_{\gamma}\alpha= \int_{S^1} \alpha(\cdot \gamma) = \ell\]
+    the action computes the period of $\gamma$. Therefore the set of periods is a subset of the critical values of $A$. By applying the Sard-Smale theorem, the critical values of a functional are countable and closed in $\RR$.

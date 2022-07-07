@@ -1,0 +1,29 @@
+%tag:0014
+%label:exr:dehnTwistAsSurgery
+%author:JeffHicks
+%name:"Dehn twist as surgery"
+%type:exercise
+
+ 
+ 
+Consider the space $T^*S^n\subset (\RR^{n+1})^2$, which we consider as pairs \[\{(x_0, \ldots, x_n), (p_0, \ldots, p_n) \;|\;\vec x\cdot \vec p=0, |\vec x|=1 \}.\] 
+\begin{enumerate}
+    \item Consider the Hamiltonian given by $H=|\vec p|^2$. Write down the Hamiltonian vector field on $T^*S^n$, and compute its time-one flow.
+    \item Consider now the symplectic manifold with boundary 
+    \[B^*_1S^n=\{(x_0, \ldots, x_n), (p_0, \ldots, p_n) \;|\;\vec x\cdot \vec p =0,|\vec x|=1, |\vec p|<1\}.\]
+    Show that $\phi_{2\pi}: B^*_1S^n\to B^*_1 S^n$, the time-1 Hamiltonian flow of $|\vec p|^2$, acts by  $-1$ on the boundary of $B^*_1S^n$. 
+    \item The symplectic Dehn twist is the map: 
+    \begin{align*}
+        \tau^n: B^*_1 S^n\to& B^*_1 S^n\\
+            (\vec x, \vec p) \mapsto& -\phi_{\pi}(\vec x, \vec p).
+    \end{align*}
+    which fixes the boundary of $B^*_1 S^n$.
+    Consider the Lagrangian submanifold  $F_q:=\{(1, \ldots, 0), (0, p_1, \ldots, p_n)\}\subset B^*_1S^n$  Show that there is a Hamiltonian isotopy which identifies
+    \[\tau_n(F_q)\sim S^n\# F_q.\]
+    \item Consider in $T^2$ the Lagrangian submanifold $L:=L_{(1, 0),0}$ as before. Identify a small neighborhood $U$ of $L$ with $B^*_1(S^1)$, and define\footnote{This does not quite give a smooth map, but it can be made smooth by slightly modifying the definition of $\tau^n$.} $\tau_L: T^2\to T^2$ by 
+    \[\tau_L(x)=\left\{\begin{array}{cc} \tau^1(x) \text{if $x\in U$}\\
+        x \text{otherwise}\end{array}\right.\]
+    For $a, b\in \ZZ$, and $\theta\in S^1$, find the Lagrangian submanifold $L_{(a', b'), \theta'}$ which is Hamiltonian isotopic to  $\tau_L(L_{(a, b), \theta})$.
+\end{enumerate}
+
+ 

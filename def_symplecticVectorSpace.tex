@@ -1,0 +1,19 @@
+%tag:0002
+%label:def:symplecticVectorSpace
+%author:JeffHicks
+%name:"symplectic vector space"
+%type:definition
+
+ 
+ A \emph{symplectic vector space} is a $2n$-dimensional vector space $V$, along with a choice of symplectic form $\omega: V\times V\to \RR$ which is an antisymmetric and satisfies any of the following equivalent non-degeneracy conditions:
+\begin{itemize}
+    \item $v \in V$ is the zero vector if and only if $\iota_v\omega=0$,
+    \item The symplectic form gives an isomorphism between $V$ and its dual:
+    \begin{align*}
+        \omega:V\to V^* &&
+        v\mapsto \iota_v\omega,
+    \end{align*}
+    \item The top form $\omega^{n}$ is non-zero.
+\end{itemize}
+
+ 

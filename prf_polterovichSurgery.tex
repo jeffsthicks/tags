@@ -1,0 +1,32 @@
+%tag:000L
+%label:prf:polterovichSurgery
+%author:JeffHicks
+%name:"construction of Polterovich surgery"
+%type:proof
+%parent:prp:polterovichSurgery
+
+ 
+ 
+
+By \cref{lemma:straightening}, it suffices to construct the Lagrangian surgery neck replacing the a standard intersection neighborhood $X=\CC^n$, $L_1=\RR^n$ and $L_2=\jmath\RR^n$.
+We start by picking a \emph{surgery profile curve},  
+\begin{align*}
+      \gamma: [-R, R] \to& \CC\\
+      t\mapsto& (a(t)+\jmath b(t))
+\end{align*}
+with the property that $a(t), b(t)$ are non-decreasing, $\gamma(t)=t$ for $t$ sufficiently small, and $\gamma_\lambda(t)=\jmath t$ for $t$ sufficiently large. We ask that the area between the real axis, imaginary axis, and $\gamma$ is $\lambda$.
+An example is drawn in \cref{fig:polterovichSurgeryProfile}.
+\input{fig_polterovichSurgeryProfile}
+This neck provides a local model for the Lagrangian surgery, which is the Lagrangian surgery neck:
+\[
+	L_1\#_\gamma L_2:=\left\{(\gamma(t)\cdot x_1,\ldots,  \gamma(t)\cdot x_n \text{ such that } x_i \in \RR^n,t\in \RR, \sum_{i} x_i^2=1\right\}.
+\]
+Note that when $t$ is sufficiently small this parameterizes $(\RR\setminus B_r(0))\subset \CC^n$, and when $t$ is sufficiently large this parameterizes $(\jmath \RR \setminus B_r(0))\subset \CC^n$. 
+Therefore, this construction satisfies the condition that the surgery Lagrangian agrees with the surgery components outside of a small neighborhood of the surgery point.
+This Lagrangian has the topology of $S^{n-1}\times \RR$, which is the local model for the connect sum $\RR^n\#_0\RR^n$.
+
+It remains to show that the submanifold is Lagrangian \todo{}
+
+
+The Lagrangian is then taken to be $L_1\#_\gamma L_2$ for any suitable choice of $\gamma$.
+ 

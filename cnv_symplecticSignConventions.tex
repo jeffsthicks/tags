@@ -1,0 +1,32 @@
+%tag:000K
+%label:cnv:symplecticSignConventions
+%author:JeffHicks
+%name:"convenctions for Symplectic topology"
+%type:convention
+
+\begin{convention}
+We take the following conventions:
+\begin{itemize}
+    \item The canonical 1-form on the cotangent bundle in $\lambda_{can}=\sum_{i=1}^\infty p_i dq_i$
+    \item We will use $\jmath=\sqrt{-1}$.
+    \item A compatible almost complex structure satisfies $\omega(v, Jv)>0$.
+    \item The Hamiltonian vector field  is the vector field which satisfies:
+    \[\iota_{V_H}\omega = - dH\]
+    \item The symplectic structure on the cotangent bundle is $d\lambda_{can}=dp_i\wedge dq_i$
+    \item The complex plane $\CC$ is identified with the cotangent bundle by $(q, p)\mapsto q-\jmath p$
+    \item The Floer action functional is 
+    \[A_{H_t}(\gamma):=-\int_\gamma \lambda+ H_t dt\]
+    giving us the Floer equation:
+    \[\partial_su +J_t \partial_t -X_{H_t}\]
+    The input end of a Floer trajectory is the limit as $s\to\infty$, and the output end is the end as $s\to-\infty$. In this convention, Floer trajectories are gradient flow lines of the Floer action. The differential on symplectic cohomology is given by counting \emph{downward} flow lines.
+\end{itemize}
+From this it follows that :
+\begin{itemize}
+    \item The standard almost complex structure on $\CC$ is compatible with the canonical symplectic form on $T^*\RR$, as $\omega(\partial_p, J\partial_p) = \omega(\partial_p, \partial_q) = 1$. The standard symplectic form on $\CC$ is $d d^c\left( \frac{1}{2}(x^2+y^2)\right)$.
+    \item The Hamiltonian vector field is related to the gradient by
+    \[\iota_{J\grad_g H}\omega(v)=\omega(J\grad_gH, v)= -\omega(v,J\grad_gH)=g(v, \grad_gH)=-dH(v)\] 
+    \item The symplectization of a contact manifold $(M, \alpha)$ is $\RR\times M$. It is equipped with the contact form $d(\exp(r) \alpha)= \exp(r) (dr \wedge \alpha + d\alpha)$. The Reeb vector field agrees with the Hamiltonian vector field of $\exp(r)$ as
+    \[ \iota_{V_\alpha}d(\exp(r)\alpha)=-\exp(r) dr = -d(\exp(r))\]
+\end{itemize}
+
+\end{convention}

@@ -1,0 +1,26 @@
+%tag:000Y
+%label:art:triangulatedCategories
+%author:JeffHicks
+%name:"triangulated categories"
+%type:article
+
+
+Broadly speaking, many of the structural results which make algebra such a useful tool come from the identifications between maps between objects, and the objects themselves. For example, in the setting of abelian groups, we can associate to every morphism $f: A\to B$ a kernel, image, and cokernel. Because this language is so useful, there is a whole language of \emph{abelian categories} whose morphisms come with the data of kernels, images, and cokernels.
+
+In many categories there is not a reasonable way to construct the ``kernel'' of a morphism. For example, given a continuous map $f: X\to Y$ between two topological spaces, we have no reasonable definition of a kernel of a continuous map. There is, however, the notion of a cone $\operatorname{cone}(f)$, which remembers which points in $Y$ came from the image of $f$. 
+\input{def_topologicalMappingCone}
+\input{rem_topologicalMappingCone}
+A triangulated category is a set of axioms for a category which encapsulates many of the properties of the cone construction. 
+\input{def_triangulatedCategory}
+\input{def_mappingConeOfCochainComplexes}
+We observe that when $X, Y$ are simplicial spaces and $f:X\to Y$ is a simplicial map that simplicial cochains topological mapping cone (\cref{def:topologicalMappingCone}) are the cone-cochains,
+\[C^\bullet(\cone(f))=\cone(f^*:C^\bullet(X)\to C^\bullet(Y)).\]
+This does not end up giving a triangulated category, as it does not satisfy \todo{example}
+However, the category of chain complexes with morphisms modulo chain homotopies is a triangulated category. This is called the \emph{homotopy category}.
+Triangulated categories capture many important aspects of homological algebra for chain complexes through the study of cohomological functors. 
+\input{def_cohomologicalFunctor}
+From this, we see that cohomological functors associate to exact triangles in $\mathcal C$ a \emph{long exact sequence}
+\[\cdots F(C[-1])\to F(A)\to F(B)\to F(C)\to F(A[1])\to \cdots \]
+\input{prp_homologyIsCohomologicalFunctor}
+
+\input{prf_homologyIsCohomologicalFunctor}
