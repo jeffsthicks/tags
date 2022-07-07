@@ -1,0 +1,22 @@
+%tag:000X
+%label:"fig:3EndedLagrangianCobordism"
+%author:JeffHicks
+%name:"3 ended Lagrangian cobordism"
+%type:"figure"
+%parent:exr_biranCornea3ended
+%caption:"The projection to the $\CC$ coordinate of a 3-ended Lagrangian cobordism"
+
+
+\begin{tikzpicture}
+
+\fill[gray!20]  (-3.5,2.5) rectangle (4.5,-3.5);
+\fill[fill=red!20]  (0.5,-1) ellipse (3 and 2);
+
+\draw[fill=blue!20] (-3.5,-1.5) .. controls (-3,-1.5) and (-1.5,-1.5) .. (-1,-1.5) .. controls (-0.5,-1.5) and (0,-2) .. (1,-2) .. controls (2,-2) and (2,-1.5) .. (2.5,-1.5) .. controls (3,-1.5) and (4,-1.5) .. (4.5,-1.5) .. controls (4,-1.5) and (3,-1.5) .. (2.5,-1.5) .. controls (2,-1.5) and (2,0) .. (2.5,0) .. controls (3,0) and (4,0) .. (4.5,0) .. controls (4,0) and (3,0) .. (2.5,0) .. controls (2,0) and (2,0) ..(1,0.5) .. controls (0,1) and (-0.5,-1.5) .. (-1,-1.5);
+\node[left] at (-3.5,-1.5) {$L_0\times \mathbb R_{\ll 0}$};
+\node[right] at (4.5,-1.5) {$L_1\times \mathbb R_{\gg 0}$};
+\node[right] at (4.5,0) {$L_2\times(\sqrt{-1}+ \mathbb R_{\gg 0})$};
+\node at (0.5,-1) {$\pi_{\mathbb C}(K)$};
+\node at (3.5,1.5) {$\mathbb C$};
+\node at (-1.5,0) {$U$};
+\end{tikzpicture}
