@@ -5,18 +5,20 @@
 %todo:"add a picture"
 
 
-    \label{exm:heegaardDiagram3sphere}
     Consider the 3-sphere 
-    \[S^3=\{(z_1, z_2)\;|\; z_i\in \CC, |z_1|^2+|z_2|^2=1\}\]. We first describe a Heegaard diagram for $S^3$. Take the function $f=|z_1|^2-|z_2|^2$, and consider the sets 
+    \[S^3=\{(z_1, z_2)\st z_i\in \CC, |z_1|^2+|z_2|^2=1\}.\]
+    We will first describe a new Heegaard diagram for $S^3$. Take the function $f=|z_1|^2-|z_2|^2$, and consider the sets 
     \begin{align*}
         U_1=f^{-1}([0, 1]) && U_2=f^{-1}([-1, 0])
     \end{align*}
     These sets are fillings of the boundary 
-    \[\Sigma_1:=f^{-1}(0)=\left\{(z_1, z_2)\;|\; |z_1|^2=\frac{1}{2}, |z_2|^2=\frac{1}{2}\right\}=\{(e^{i\theta_1}, e^{i\theta_2}), \theta_1, \theta_2\in S^1\}.\]
+    \[\Sigma_1:=f^{-1}(0)=\left\{(z_1, z_2)\st |z_1|^2=\frac{1}{2}, |z_2|^2=\frac{1}{2}\right\}=\{(e^{i\theta_1}, e^{i\theta_2}), \theta_1, \theta_2\in S^1\}.\]
     which is a torus. Observe that $\grad f$ is transverse to the boundary of $\Sigma_1$, and that the critical locus of $f$ can be parameterized by the cycles $\{(e^{i\theta_1}, 0)\}\sqcup \{(0, e^{i\theta_2})\}$. It follows the sets $U_1, U_2$ are diffeomorphic to $S^1\times D^2$ and $D^2\times S^1$ respectively. These are handlebodies, giving us a Heegaard decomposition.
 
     We now Morsify $f$ by taking a perturbation. Take $\rho:[-1, 1]\to [0, \eps]$ satisfying the constraints:
     \begin{align*}
         \rho|_{[-1, -.5]}=\eps/10 && \rho|_{[0, 1]}=0 && |\rho'|<\eps
     \end{align*}
-    The the function $f+ \rho(f)\cos(\theta_1)+\rho(-f)\cos(\theta_2)$ has 4 critical points at $(\pm 1 , 0)$ and $(0, \pm 1)$. The attaching disks associated to the index 2 and index 1 critical points give the  cycle $\alpha_1=S^1\ times \{1\}$ and $\beta_1=\{1\}\times S^1$ inside $T^2$. 
+    The the function $f+ \rho(f)\cos(\theta_1)+\rho(-f)\cos(\theta_2)$ has 4 critical points at $(\pm 1 , 0)$ and $(0, \pm 1)$. The attaching disks associated to the index 2 and index 1 critical points give the  cycle $\alpha_1=S^1\ times \{1\}$ and $\beta_1=\{1\}\times S^1$ inside $T^2$.  See \cref{fig:heegaardDiagram3Sphere}.
+
+    \input{fig_heegaardDiagram3Sphere}

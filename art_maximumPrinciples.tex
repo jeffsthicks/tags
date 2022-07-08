@@ -13,17 +13,17 @@ Supposing that $X$ is an exact symplectic manifold, and that our time-dependent 
 We take a slightly different convention (following Equation 5.2 of \cite{abouzaid2010geometric}) and give each orbit the grading $\deg(\gamma)=n-CZ(\gamma)$, where $CZ(\gamma)$ is the Conley-Zehnder index.
 The structure coefficients of the differential are given by counts of solutions to Floer's equation. The theory becomes powerful when it satisfies the following properties:
 \begin{itemize}
-    \item $\CF(X, H_t)$ is a chain complex. The key step is to show that when $\dim(\mathcal M(\gamma_+, \gamma_-))=1$, there exists a compactifiaction of this moduli space by including broken cylinders. A compactification of the space comes from applying Gromov compactness, while additional requirements on $X$ are sometimes required ensure that the only configurations which appear in the compactification are broken cylinders. In our setting, the only breaking configurations which may occur are broken cylinders, as $X$ is exact (so $\omega(\pi_2(X))=0)$.
+    \item $\CF(X, H_t)$ is a chain complex. The key step is to show that when $\dim(\mathcal M(\gamma_+, \gamma_-))=1$, there exists a compactification of this moduli space by including broken cylinders. A compactification of the space comes from applying Gromov compactness, while additional requirements on $X$ are sometimes required ensure that the only configurations which appear in the compactification are broken cylinders. In our setting, the only breaking configurations which may occur are broken cylinders, as $X$ is exact (so $\omega(\pi_2(X))=0)$.
     \item Given $H_{t, 0}$ and $H_{t, 1}$ two time-dependent Hamiltonians, there exists a continuation map $\CF(X, H_{t, 0})\to \CF(X, H_{t, 1})$. Furthermore, this map is a homotopy equivalence. 
-    \item Finally, we need some way to compute $\CF(X, H_{t, 1})$. One way to do this is to observe that for $C^2$ small Hamiltonians the Floer cochains agree with the Morse cochains (and only consist of constant orbits). By either using the PSS-isomorphism or by analyzing Floer trajectores, the Floer cohomology can be compared to the Morse cohomology of $X$.
+    \item Finally, we need some way to compute $\CF(X, H_{t, 1})$. One way to do this is to observe that for $C^2$ small Hamiltonians the Floer cochains agree with the Morse cochains (and only consist of constant orbits). By either using the PSS-isomorphism or by analyzing Floer trajectories, the Floer cohomology can be compared to the Morse cohomology of $X$.
 \end{itemize}
-The major difference in defining the Hamiltonian Floer ccohomology for Liouville domains $X$ (as opposed to compact symplectic manifolds) comes from the proof of Gromov-compactness. The first step in the proof of Gromov-compactness is to apply Arzel\'a-Ascoli to out sequence of psuedoholomorphic maps.  Because $\hat X$ is not compact, we cannot apply the Arzel\'a-Ascoli theorem to a sequence of pseudoholomorphic cylinders $u: S^1\times \RR \to \hat X$. 
+The major difference in defining the Hamiltonian Floer cohomology for Liouville domains $X$ (as opposed to compact symplectic manifolds) comes from the proof of Gromov-compactness. The first step in the proof of Gromov-compactness is to apply Arzel\'a-Ascoli to out sequence of pseudoholomorphic maps.  Because $\hat X$ is not compact, we cannot apply the Arzel\'a-Ascoli theorem to a sequence of pseudoholomorphic cylinders $u: S^1\times \RR \to \hat X$. 
 
 We now give an example of where we can solve the issue of non-compactness.
 \input{exm_compactnessFromMaximumModulus}
 In order to extend \cref{exm:compactnessFromMaximumModulus} to the setting of $\hat X$, we will use the maximum principle. First, we will need to assume that we have chosen our almost complex structure for $\hat X$ so that the sub-bundle spanned by the vector fields $\partial_r, R$ form an almost complex subspace.
 \input{def_contactTypeACS}
-We will also need to assume that we have choosen our Hamiltonian so that over the symplectization it only depends on the $r$-coordinate.
-For such a contact type almost complex structure and Hamiltonian there exists a verion of \cref{exm:compactnessFromMaximumModulus}.
+We will also need to assume that we have chosen our Hamiltonian so that over the symplectization it only depends on the $r$-coordinate.
+For such a contact type almost complex structure and Hamiltonian there exists a version of \cref{exm:compactnessFromMaximumModulus}.
 \input{prp_liouvilleIsGeometricallyBounded}
 \input{prf_liouvilleIsGeometricallyBounded}

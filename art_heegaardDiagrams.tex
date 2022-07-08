@@ -6,20 +6,25 @@
 
 
 \input{def_heegaardSplitting}
-\input{exm_heegaardSplitting}
 A handlebody is a 3-manifold $U$ with boundary with a collection disks $\{f_i: D^2\to U\}_{i=1}^g$ which are embedded and disjoint, so that $U\setminus \bigcup_{i=1}^g \Im(f_i)=D^3$. 
-\input{lem_handlebodies}
+\input{exm_heegaardSplitting}
 \input{prp_existenceOfHeegaardSplitting}
+We first need this useful lemma.
+\input{lem_handlebodies}
 \input{prf_existenceOfHeegaardSplitting}
-To determine the data of a Heegaard splitting, one must specify the data of two fillings of $\Sigma_g$ by handlebodies. When the Heegaard splitting is determined by a self-indexing Morse function $f: M\to \RR$, we can use the critical points to determine the fillings $U_1$ and $U_2$ based on data contained in $\Sigma_g$. The filling $U_1$ is constructed by considering how the downward flow spaces of the critical points of $f|_{U_1}$ attach to the $\Sigma_g$. We may additionally assume  that $f$ has a unique maximum; then to determine the filling we only need to consider how $W^\downarrow(p)$ intersects $\Sigma_g$ for $\{p\in \Crit(f), \ind(p)=1\}$. Furthermore, there are $g$ such critical points which we enumerate as $\{p_i\}_{i=1}^g$. These downward flow spaces are 2-dimensional, so $\{\Sigma_g\cap W^\downarrow(p_i)\}_{i=1}^g$ gives $g$ disjoint cycles in $\Sigma_g$. We call these cycles 
-\[\{\alpha_i\}_{i=1}^g:=\{ W^\downarrow(p_i)\cap \Sigma_g\}_{p_i\in \Crit(f), \ind(p_i)=1}\]
-Similarly, we can consider the index 2 critical points of $f$, which are all contained in $U_2$, and look at their upward flow spaces
-\[\{\beta\}_{i=1}^g:=\{ W^\uparrow(p_i)\cap \Sigma_g\}_{p_i\in \Crit(f), \ind(p_i)=1}.\]
+Seeing that we can decompose each 3-manifold into two handlebodies, we ask what extra do we need to equip  $U_1, U_2$ and $\Sigma$ with in order to remember $M$. 
+
+We again turn to Morse theory. When we construct $U_1, U_2$ and $\Sigma$ by a self-indexing Morse function $f: M\to \RR$, we can use the critical points of $f$ to determine the fillings $U_1$ and $U_2$ of $\Sigma_g$. The topology of the filling $U_1$ is recovered by considering how the downward flow spaces of the critical points of $f|_{U_1}$ attach to the $\Sigma_g$. We may additionally assume  that $f$ has a unique minimum. The topological information of the filling is recovered by recording how the upward flow spaces $W^\uparrow(p)$ intersect $\Sigma_g$ for $\{p\in \Crit(f), \ind(p)=1\}$. There are $g$ such critical points which we enumerate as $\{p_i\}_{i=1}^g$. These upward flow spaces are 2-dimensional, so $\{\Sigma_g\cap W^\uparrow(p_i)\}_{i=1}^g$ gives $g$ disjoint cycles in $\Sigma_g$. We call these cycles 
+\[\{\alpha_i\}_{i=1}^g:=\{ W^\downarrow(p_i)\cap \Sigma_g\}_{p_i\in \Crit(f), \deg(p_i)=1}.\]
+
+Similarly, the filling $U_2$ is recovered by the attaching data for the downward flow spaces of index 2 critical points of $f$,
+\[\{\beta\}_{i=1}^g:=\{ W^\downarrow(p_i)\cap \Sigma_g\}_{p_i\in \Crit(f), \ind(p_i)=1}.\]
 \input{def_heegaardDiagram}
-We will usually write $\underline \alpha, \underline \beta$ for $\{\alpha_i\}_{i=1}^g, \{\beta_i\}_{i=1}^g$.
+We will write  $\underline \alpha, \underline \beta$ for $\{\alpha_i\}_{i=1}^g, \{\beta_i\}_{i=1}^g$. These are called the \emph{attaching cycles} of the Heegaard diagram.
+The example given in \cref{exm:heegaardSplitting} is of genus 0, we do not have any attaching cycles for that example.
 \input{exm_heegaardDiagram3Sphere}
-Every Heegaard diagram specifies a 3-manifold, however a single 3-manifold can have many different presentations with different Heegaard diagrams. We have already seen 2 different Heegaard diagrams for $S^3$ in \cref{exm:heegaardSplitting} and  \cref{exm:heegaardDiagram3sphere}. 
-Therefore, if we are to study 3-manifolds via their Heegaard diagram, we need to understand when two diagrams give presentations of the same manifold. We first describe some operations which modify a Heegaard diagram, but produce the same 3-manifold. 
+Every Heegaard diagram specifies a 3-manifold, however a single 3-manifold can have many different presentations with different Heegaard diagrams. We have already seen 2 different Heegaard diagrams for $S^3$ in \cref{exm:heegaardSplitting} and  \cref{exm:heegaardDiagram3Sphere}. 
+If we are to study 3-manifolds via their Heegaard diagram, we need to understand when two diagrams give presentations of the same manifold. We first describe some operations which modify a Heegaard diagram, but produce the same 3-manifold. 
 \input{def_heegaardStabilization}
 \input{rem_heegaardStabilization}
 \input{def_heegaardMoves}
