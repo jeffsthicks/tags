@@ -4,9 +4,14 @@
 %name:"morphism of right $\mathcal A$-modules"
 %type:"definition"
 
- 
- 
-Let $M, N$ be two right $\mathcal A$ modules. A \emph{morphism} between $M, N$ are collections of maps for every set of objects $A_0, \ldots, A_k\in \mathcal A$,
-\[f^{1|k}: M(A_k)\otimes \hom(A_{k-1}, A_k)\otimes \cdots \otimes \hom(A_0, A_1)\to N(A_0)[|f|-d+1].\]
+Let $M, N$ be $A_\infty$ modules. A  \emph{pre-morphism of $A_\infty$ modules} of degree $d$ is a collection of maps for every set of objects $A_0, \ldots, A_{k-1}\in \mathcal A$,
+\[f^{1|k-1}: M(A_{k-1k)\otimes \hom(A_{k-2}, A_{k-1})\otimes \cdots \otimes \hom(A_0, A_1)\to N(A_0)[d-k+1].\]
+The set of all $A_\infty$ pre-morphisms $\hom^\bullet_{\mod-\mathcal A}(M, N)$ is a cochain complex whose differential is
+\begin{align*}
+    (m^1_{\hom_{\mod-\mathcal A}}(f))^{1|k-1}=&\sum_{j+j_2=k}(-1)^\diamondsuitm_{N}^{1|j_2}(f^{1|j-1}\tensor \id^{\tensor j_2})\\
+    &+\sum_{j_1+j+j_2=k, j_1>0}(-1)^\diamondsuit f^{1|j_1+j_2-1}(\id^{\tensor j_1}\tensor  m^j_{\mathcal A}\tensor \id^{\tensor j_2})\\
+    &+ \sum_{j_1+j+j_2=k, j_1=0}(-1)^\diamondsuit f^{1|j_1+j_2-1}(  m^{1|j-1}_{M}\tensor \id^{\tensor j_2})
+\end{align*}
+where $\diamondsuit_j=-k+j+1\sum_{i={j-1}}^{k}|x_i|$.
 
  

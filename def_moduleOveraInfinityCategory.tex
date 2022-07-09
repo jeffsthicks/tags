@@ -6,19 +6,18 @@
 
  
  
-Let $\mathcal A$ be  an \emph{$A_\infty$} category; denote the product structure by $m^k_\mathcal A$. A right $\mathcal A$ module (denoted by $M\in \text{Mod}-\mathcal A$ is a 
+Let $\mathcal A$ be  an \emph{$A_\infty$} category; denote the product structure by $m^k_\mathcal A$. A right $\mathcal A$ module (denoted by $M\in \text{Mod}-\mathcal A$) is a 
 \begin{itemize}
     \item assignment $M(A)$ of a graded module to each $A\in \text{Ob}(\mathcal A$) and,
-    \item for sequence $A_0, \ldots, A_k$ of objects in $\mathcal A$, a composition map 
+    \item for each sequence $A_1, \ldots, A_k$ of objects in $\mathcal A$, a composition map 
     \[
-        m^{1|k}_{M|\mathcal A}:M(A_k)\otimes \hom(A_{k-1}, A_k)\otimes \cdots \otimes \hom(A_1, A_0)\to M(A_k)[1-k]
+        m^{1|{k-1}}_{M|\mathcal A}:M(A_{k-1})\otimes \hom(A_{k-2}, A_{k-1})\otimes \cdots \otimes \hom(A_1, A_0)\to M(A_k)[2-k].
     \]
-for each $k\geq 0$. 
 \end{itemize}
-These are required to satisfy the quadratic  $A_\infty$ relationships:\todo{check this}
+These are required to satisfy the quadratic  $A_\infty$ relationships for every sequences $A_1, \ldots, A_k$\todo{check this}
 \begin{align*}
-    0=&\sum_{\substack{ j_1+j+j_2=k_1+1\\j_1>0 }} m_{M|{\mathcal A}}^{1|k_1-j+1}\circ ( \operatorname{id}_M\otimes  \operatorname{id}_A^{\otimes j_1}\otimes m^{j}_A \otimes \operatorname{id}^{\otimes k_1-j_1-j})\\
-    &+\sum_{\substack{ j+j_2=k_1+1\\j_1\leq k_1\leq j_1+j-1}} m_{M|\mathcal A}^{1|j_2} \circ (m_{A|M}^{1|j}\otimes  \operatorname{id}_A^{\otimes j_2})
+    0=&\sum_{\substack{ j_1+j+j_2=k\\j_1=0 }} (-1)^{\clubsuit_k} m_{M|\mathcal A}^{1|j_2} \circ (m_{A|M}^{1|j}\otimes  \operatorname{id}_A^{\otimes j_2})\\
+    &+\sum_{\substack{ j_1+j+j_2=k\\j_1>0 }} (-1)^{\clubsuit_k} m_{M|{\mathcal A}}^{1|k-j}\circ ( \operatorname{id}_M\otimes  \operatorname{id}_A^{\otimes j_1}\otimes m^{j}_A \otimes \operatorname{id}^{\otimes j_2})
 \end{align*}
 
  

@@ -4,18 +4,18 @@
 %name:"The Category of modules over an $A_\infty$ category"
 %type:"article"
 
- Given $\mathcal C$ an $A_\infty$ category, there is category of $\text{Mod}-\mathcal C$ (dg category of $A_\infty$-modules) which is triangulated.
+ Given $\mathcal C$ an $A_\infty$ category, there is a category of $\text{Mod}-\mathcal C$ (dg category of $A_\infty$-modules) which is triangulated.
 
 \input{def_moduleOveraInfinityCategory}
+\input{exm_ringModule}
 \input{exm_zeroModule}
 \input{exm_yonedaModule}
 \input{def_morphismOfaInfinityModules}
 \input{def_categoryOfAInfinityModules}
 \input{prp_aInfinityModulesIsDG}
-\input{prf_aInfinityModulesIsDG}
-One observes that $\mod-\mathcal A$ is in general a ``nicer'' category than $\mathcal A$. One can also view $\mod-\mathcal A$ as category of functors from $\mathcal A$ to the category of chain complexes. One expects $\mod-\mathcal A$ to be a better behaved than $\mathcal A$ as it inherits many of the properties of the category of chain complexes.
+One observes that $\mod-\mathcal A$ is in general a ``nicer'' category than $\mathcal A$, as it inherits many of the properties of the category of chain complexes.
 \input{prp_categoryOfAInfinityModulesIsTriangulated}
 \input{prf_categoryOfAInfinityModulesIsTriangulated}
-The Yoneda module construction (\cref{exm:yonedaModule}) is gives a fully faithful contravariant functor $\mathcal A \to \mod-\mathcal A$.
+The Yoneda module construction (\cref{exm:yonedaModule}) gives a fully faithful contravariant functor $\mathcal A \to \mod-\mathcal A$.
 As the category $\mod-\mathcal A$ has mapping cones, this gives a triangulated envelope for $\mathcal A$.
-Fortunately, the things that we've added in are the mapping cones that we need.  We therefore say that $A\to B \to C$ is an exact triangle in $\mathcal C$ if the image under Yoneda embedding is isomorphic to $A\to B \to \cone(f)$.
+We therefore say that $A\to B \to C$ is an exact triangle in $\mathcal C$ if the image under Yoneda embedding is isomorphic to $A\to B \to \cone(f)$.

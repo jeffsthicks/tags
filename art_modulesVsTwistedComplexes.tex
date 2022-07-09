@@ -1,0 +1,18 @@
+%tag:0011
+%label:"art:modulesVsTwistedComplexes"
+%author:JeffHicks
+%name:"modules or twisted complexes?"
+%type:"article"
+
+Both \cref{def:moduleOveraInfinityCategory} and \cref{def:twistedComplex} provide a method for identifying the exact triangles of $\mathcal C$, an $A_\infty$ category. We now highlight some of the differences between these two constructions.
+
+These differences are most easily seen by reducing to a simple setting. Consider $R$ a field. Then the category of twisted complexes over $R$ will be the category of finite dimensional graded vector spaces with a choice of basis, while $\mod R$ will be the category of $R$-vector spaces. Given another ring $S$, and a ring homomorphism $R\to S$, we obtain a map from $\Tw(R)\to \Tw(S)$ and a map $\mod-S\to \mod R$. Also observe that the category of $R$-vector space is much larger than the category of finite-dimensional graded vector spaces.
+
+The construction of twisted complexes is a functor on the category of $A_\infty$ categories,
+\[\Tw:A_\infty-\text{cat}\to A_\infty-\text{cat}.\]
+The $\mod-\mathcal C$ construction also gives us a contravariant functor on the category of $A_\infty$ categories,
+\[\mod-(-):A_\infty-\text{cat}\to (A_\infty-\text{cat})^{\text{op}}.\]
+
+For the purposes of computations in symplectic geometry, it is usually unimportant if we consider enlarging the Fukaya category by looking at modules or at twisted complexes, as both structure give us access to the exact triangles in $\Fuk(X)$. Many proofs become cleaner to write when using the viewpoint of $\mod-\mathcal A$, while it can be notationally easier to perform computations using twisted complexes. 
+
+However, if we wish to compare the Fukaya category of a symplectic manifold to some other category (as in the setting of homological mirror symmetry) the choice of triangulated envelope becomes important. In mirror symmetry, we compare the Fukaya category of a symplectic manifold $X^A$ to the derived category of coherent sheaves on a mirror space $X^B$. When $X^B$ is a compact smooth complex variety, this is the same as the category of perfect complexes -- which are precisely the sheaves which can build out line bundles via the operations of taking mapping cones. For this reason, it is more common to see that Fukaya category defined to be the twisted complexes on the geometric Fukaya category in papers related to mirror symmetry.

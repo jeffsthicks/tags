@@ -9,13 +9,9 @@
 Let $\mathcal A$ be  an \emph{$A_\infty$} category. The \emph{category of right $\mathcal A$- modules}, denoted by $\text{Mod}-\mathcal A$, is the differential graded category whose: 
 \begin{itemize}
     \item Objects are right $\mathcal A$ modules and
-    \item morphisms are $\mathcal A$ module pre-morphisms (i.e. they do not necessarily satisfy the quadratic $A_\infty$ relations ).
+    \item chain complexes of morphisms are the chain complexes of $\mathcal A$ module pre-morphism,
+    \item composition is given by 
+    \[m^2_{\mod-\mathcal A}(f, g)=\sum_{j+j_2=k}-(-1)^\diamondsuit f^{1|j_2}(g^{1|j-1}\tensor \id^{j^2})\]
+    \item higher product vanishing for $k\geq 3.$
 \end{itemize}
-The differential 
-\begin{align*}
-    (m^1_{\mod-\mathcal A}(f))^{1|k}=& \sum_{j+j_2=k} m^{1| 1+j_2}_{N|\mathcal A}(f^{1|j}\otimes \id^{\otimes j+1})\\&+  \sum_{j+j_2=k} f^{1| 1+j_2}_{M|\mathcal A}(m^{1|j}_{M|\mathcal A}\otimes \id^{\otimes j+1})\\&+ \sum_{j_1+j+j_2=k}f^{1|j_1 1+j_1}(\id_M\otimes \id^{\otimes j_1}\otimes m^j_{\mathcal A}\otimes \id^\otimes{j_2}).
-\end{align*}
-Given $g:M\to N$ and $h: N\to O$, the composition is defined by 
-\[m^2_{\mod-\mathcal A}(h, g)^{1|k}:=\sum_{j+j_2=k}h^{1|j_2}(g^{1|j}\otimes \id^{\otimes j_2})\]
-The higher products $m^k_{\mod-\mathcal A}=0$ for $k\geq 3$. 
  

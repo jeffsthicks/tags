@@ -1,0 +1,17 @@
+%label:"exm:ringModule"
+%name:"modules over a ring as $A_\infty$ modules"
+%type:"example"
+
+The name module comes from the simplest example. Let $R$ be a ring. Now consider the $A_\infty$ category $\mathcal A$ which only contains one object $A$, and $\hom(A, A)=R$. We describe some constructions of modules over this category.
+
+Let $M$ be an $R$-module. We obtain a $\mod-\mathcal A$ with the assignment $M(A)=M$,  and whose product $m^{1|k}:M(A)\tensor A^{\tensor k}\to M(A)$ is 
+\[
+    m^{1|1}(x,r)=x\cdot r
+\]
+and vanishes if $k\neq 1$. The $A_\infty$ module relations state 
+\[m^{1|1}(m^{1|1}(x, r_1),r_2)-m^{1|1}(x, m^2(r_1, r_2))=(x\cdot r_1)\cdot r_2 - x\cdot (r_1\cdot r_2)=0\]
+which is guaranteed by associativity of the product. 
+
+Given any chain complex of $R$-modules $M^\bullet$, we similarly obtain a right $\mathcal A$ module by taking $M^\bullet(A)=M^A$; the $A_\infty$ module relations now state that $m^{1|0}\circ m^{1|0}= d_M\circ d_M=0$, and that $d_M$ is a morphism of $R$-modules.
+
+There are right $\mathcal A$-modules beyond chain complexes. However, given any right $\mathcal A$-module, the homology of the complex $H^\bullet(M(A))$ is a graded $R$-module.

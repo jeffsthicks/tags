@@ -5,18 +5,18 @@
 %type:"exposition"
 
 \begin{exposition}
-These expository notes are to provide some intuition for how exact sequences can be used to compute invariants in symplectic geometry. The notes are largely based on \cite{auroux2014beginner}.
+These expository notes are meant to provide some background for how to use exact sequences in Lagrangian intersection Floer cohomology. The notes are largely based on \cite{auroux2014beginner}.
 Recall that given Lagrangian submanifolds $L_1, L_2$ which satisfy some suitable hypotheses:
 \begin{itemize}
     \item the Lagrangian submanifolds do not bound pseudoholomorphic disks (for example by asking that $\omega(\pi_2(X, L_i))=0$), \label{cond:unobstructed} 
-    \item The Lagrangian submanifolds are spin and graded ,\label{cond:orientationgrading}
+    \item The Lagrangian submanifolds are spin and graded , and\label{cond:orientationgrading}
     \item The intersections between $L_1, L_2$ are transverse. \label{cond:transverseintersection}
 \end{itemize}
 we can construct a chain complex called Lagrangian intersection Floer cohomology. As a vector space, this chain complex is generated on the intersections of our Lagrangian submanifolds
 \[\CF(L_0, L_1):= \bigoplus_{x\in L_1\cap L_2} \Lambda\langle x_i\rangle.\]
 Here, $\Lambda$ is the \snip{Novikov Ring}{def:novikovRing}.
 The differential on this chain complex comes from the structure constants 
-\[\langle d(x), y\rangle:=\sum_{u\in \mathcal M(x, y)} T^{\omega u}.\]
+\[\langle d(x), y\rangle:=\sum_{u\in \mathcal M(x, y)}\pm T^{\omega (u)}.\]
 In general, this cochain complex is difficult to compute. However, there exist a number of tools whereby geometric relations between Lagrangian submanifolds translate into algebraic relations on their Lagrangian intersection Floer cohomology groups. The natural language for these relations comes from the Fukaya category. Recall that this is a \snip{ $A_\infty$ category}{def:ainfinityCategory} whose: 
 \begin{itemize}
     \item objects are Lagrangian submanifolds $L_i$ satisfying the conditions above,
@@ -25,8 +25,9 @@ In general, this cochain complex is difficult to compute. However, there exist a
     \[m^k: \CF(L_{k-1}, L_k)\otimes\cdots \otimes \CF(L_0, L-1)\to \CF(L_0, L_k)[2-k]\]
     which count holomorphic polygons with boundaries on the $L_i$ and corners limiting to their intersection. 
 \end{itemize}
-The goal will be to explain why this additional algebraic structure on the Fukaya category will help us compute Lagrangian intersection Floer cohomology.
-We are motivated by the following observation.
+The goal of this note will be to explain how to leverage additional algebraic structure on the Fukaya category to compute Lagrangian intersection Floer cohomology.
+
+We are motivated by the following strategy.
 In other categories, you might try to understand the structure of the category by reducing it to some set of irreducible objects. For instance, if you were studying modules, you might notice that for every map between modules you have a kernel of the map, which is again a module. This process gives you a method for decomposing modules into irreducible modules. 
 
 In the Fukaya category, the morphisms are (linear combinations) of intersection points between Lagrangian submanifolds, so it is unclear how to construct the kernel of a map.
