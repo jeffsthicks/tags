@@ -1,0 +1,21 @@
+%label:"prf:straightening"
+%type:"proof"
+%name:"local model for Lagrangian intersection"
+
+
+    At each $q\in L\cap Q$, consider the Lagrangian submanifold $T^*qQ$. 
+    Take local coordinates $(q_1, \ldots, q_n, p_1, \ldots, p_n)$ identifying $q$ with the origin so that $T^*qQ$ is the linear subspace in the $p_i$ directions.
+    We can take a Weinstein neighborhood $T^*_\epsilon(T^*_qQ)$ of $T^*_qQ$, whose cotangent bundle structure is 
+    \begin{align*}
+        T^*_\epsilon(T^*_qQ)\to T^*qQ && (q_1, \ldots, q_n, p_1, \ldots, p_n)\mapsto (p_1, \ldots, p_n).
+    \end{align*}
+    Since the intersection $L\cap Q$ is transverse, the projection $T_qL\to T_q(T^*qQ)$ is surjective. Therefore when restricted to a small enough neighborhood of $\in U\subset T^*_qQ$  the Lagrangian $L|_{T^*_\epsilon U}$ presents itself as a section of $T^*_\epsilon U\to U$. 
+    Therefore, there exists a one form $\eta\in \Omega^1(U)$ so that $L|_{T^*U}$ is parameterized by $(p, \eta_p)$.
+
+    By taking an even smaller $U$, we may assume that $U$ is a contractible neighborhood, and $\eta=dH$ is an exact one-form.
+    Pick $\rho$ a function which vanishes in a neighborhood of $q\in U$, and takes the value $1$ in a neighborhood of $\partial U$. 
+    Consider the Lagrangian section of $T^*U$ parameterized by $d(\rho \cdot H)$.
+    This section is Hamiltonian isotopic to $L|_{T^*_\epsilon U}$ relative boundary.
+    Additionally, $d(\rho\cdot H)$ agrees with $U=T^*_qQ$ in a small neighborhood of $q$.
+    The Lagrangian submanifold $L\setminus (L|_{T^*U})\cup (d(\rho\cdot H))$ is Hamiltonian isotopic to $L$. 
+

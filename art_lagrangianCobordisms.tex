@@ -10,6 +10,13 @@ Let $M, N$ be $n$-manifolds.
 A \emph{cobordism} $K: M\rightsquigarrow N$ is a manifold with boundary $\partial K=M\sqcup N$. 
 There is an analogous notion of cobordism exists for Lagrangian submanifolds.
 \input{def_lagrangianCobordism}
+One can also discuss Lagrangian cobordisms with both positive and negative ends.
 \input{fig_lagrangianCobordism}
 \input{exm_suspensionCobordism}
 \input{exm_polterovichSurgeryTrace}
+Lagrangian cobordisms give us new examples of exact sequences in the Fukaya category. 
+\input{thm_exactSequencesFromCobordisms}
+In particular, if $K: (L_0, L_1, L_2)\rightsquigarrow \emptyset$ is a Lagrangian cobordism, then we have an exact triangle
+\[L_2\to L_1\to L_0.\]
+In contrast to \cref{cor:surgeryExactTriangle}, such a Lagrangian cobordism does not identify \emph{which} exact triangle one has --- it only identifies that you have an exact triangle. 
+The iterated mapping cone given in \cref{dig:exactSequencesFromCobordisms} is an example of a twisted complex.

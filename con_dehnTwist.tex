@@ -6,16 +6,19 @@
 
 
     Fix the standard metric $g$ on $S^n$, and let $B_r^*S^{n}$ be the radius  $r$ conormal ball of $S^n$. 
-    We first describe a symplectomorphism of $B_r^*S^n$.
+    We first describe a symplectomorphism of $B_r^*S^n$. Let $\pi: B^*_r^Sn\to S^n$ be projection to the base.
     Consider the function 
     \begin{align*}
         f: B_r^*S^{n}\to& \RR\\
-        (q, p) \mapsto& \pi|p|_g.
+        (q, p) \mapsto& |p|_g^2.
     \end{align*}
-    The function $f^2$ is a smooth map on $B_r^*S^n$, and the Hamiltonian flow of $f^2$ is the geodesic flow. 
+    The function $f$ is a smooth map on $B_r^*S^n$, and the Hamiltonian flow of $f$ is the geodesic flow. 
     This is a smooth function on $B^*_rS^n\setminus S^n$. 
     On the symplectic manifold $B^*_rS^n\setminus S^n$ the time one flow of $f$ is the antipodal map on the $S^n$ base. 
-    We take a smooth function $\rho: \RR\to \RR$ with the property that $\rho \circ f = f^2$ when $f< \epsilon$, $\rho\circ f=f$ when $f>r-\epsilon$, and $\rho$ is increasing. 
+    We take a smooth function $\rho: \RR\to \RR$ with the property that $\rho \circ f = f$ when $f< \epsilon$, $\rho\circ f=\sqrt f$ when $f>r-\epsilon$, and $\rho$ is increasing. 
+
+    \input{dig_profileForDehnTwist}
+    
     Let $H= \rho \circ f: B^*_rS^n\to \RR$, and let $\phi_H: B_r^*S^n\to B_r^*S^n$ be the time-one Hamiltonian isotopy of $H$. 
     Finally, let $-\id: S^n\to S^n$ the antipodal map, which extends to a symplectomorphism $-\id: B_r^*S^n\to B_r^*S^n$. 
     Define $-\phi_H:=-\id\circ \phi_H$. 

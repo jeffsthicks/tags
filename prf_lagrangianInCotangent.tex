@@ -1,0 +1,23 @@
+%label:"prf:lagrangianInCotangent"
+%type:"proof"
+%name:"closed sections are Lagrangians"
+
+
+    We parameterize the Lagrangian $L$ by with the map 
+    \begin{align*}
+        \li: Q\into& T^*Q &&
+        q\mapsto&(q, \alpha(q))
+    \end{align*}
+    We now wish to show that $i^*\omega=0$. 
+    Let $(q_1, \ldots q_n)$ be local coordinates on $Q$, so that $\alpha(q)=\sum_{k=1}^n \alpha_k(q)dq_{k}$. 
+    Let $\partial_{q_i}, \partial_{q_j}$ be two basis vectors for the tangent space of $Q$. 
+    Let $\{(\partial_{q_i}, 0)\}\cup\{(0, \partial p_i)\}$ be a basis for the tangent space of $T^*Q$.
+    \begin{align*}
+        \li^*\omega(\partial_{q_i}, \partial_{q_j})=& \omega \left(\left(\partial_{q_i}, \sum_{k=1}^n (\partial_{q_i}\alpha_k )\cdot \partial_{p_k}\right), \left(\partial_{q_j}, \sum_{k=1}^n (\partial_{q_j} \alpha_k)\cdot \partial_{p_k}\right)\right)\\
+        =&\left( \sum_{l=1}^n dp_l \wedge dq_l\right) \left(\left(\partial_i, \sum_{k=1}^n (\partial_{q_i}\alpha_k )\cdot \partial_{p_k}\right), \left(\partial_{q_j}, \sum_{k=1}^n (\partial_{q_j} \alpha_k )\cdot\partial_{p_k}\right)\right)\\
+        \intertext{Since $dq_i\partial_{q_j}=\delta_{ij}$ and $dp_i\partial_{p_j}=\delta_{ij}$}
+        =& \partial_{q_j} \alpha_i - \partial_{q_i} \alpha_j\\
+        =& d\alpha(\partial_{q_i}, \partial_{q_j})
+    \end{align*}
+    This vanishes for all $i, j$ if and only if $\alpha$ is closed. 
+

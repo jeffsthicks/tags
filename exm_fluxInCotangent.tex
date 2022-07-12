@@ -1,0 +1,26 @@
+%label:"exm:fluxInCotangent"
+%type:"example"
+%name:"flux in $T^*L$"
+
+
+    Consider the symplectic manifold $X=T^*L$.
+    Consider a closed one form  $\eta \in \Omega^1(L, \RR)$.
+    Use this to create a Lagrangian isotopy 
+    \begin{align*}
+        \li_t: L\times [0, 1]\to& T^*L &&       (q,t) \mapsto& t\cdot \eta_p
+    \end{align*}
+    between the zero section and the graph of $\eta$. 
+    To each loop $\gamma\in L$, look at the cylinder $\li_t\circ \gamma:S^1\times I\to X$.
+    This can be explicitly parameterized by 
+    \begin{align*}
+        c: S^1\times I \to& T^*L&&
+        (\theta, t) \mapsto& (\gamma(\theta), t\cdot \eta_{\gamma(\theta)}).
+    \end{align*}
+    The cotangent bundle has an exact symplectic form, $\omega=d\lambda$, so computing the flux can be simplified by using Stoke's theorem:
+    \begin{align*}
+        \Flux_{\li_t}(\gamma)=&\int_{c}\omega=\int_{c}d\lambda \\
+        =&\int_{S^1\times \{1\}}c^*\lambda - \int_{S^1\times\{0\}}c^*\lambda \\
+        =&\int_{S^1}\gamma^*\eta=\eta(\gamma)
+    \end{align*}
+    So $[\Flux_{\li_t}]=[\eta]\in \Omega(L)$. 
+

@@ -1,0 +1,14 @@
+%tag:000X
+%label:"dig:viterboSuggestive"
+%type:"diagram"
+%author:JeffHicks
+
+\begin{tikzpicture}
+    \draw[scale=0.5, domain=4:9, smooth, variable=\x, blue] plot ({\x}, {sqrt(\x)});
+      
+    \draw[scale=0.5, domain=0:1, smooth, variable=\x, blue] plot ({\x}, {\x*\x});
+    \node at (0,0){};
+    \draw (0.5,0.5) .. controls (0.75,1) and (1,0.75) .. (2,1);
+    \draw[->] (0,0) -- node[below]{$r$} (5,0);
+    \draw[->] (0,0) --node[left]{$\rho$} (0,2);
+    \end{tikzpicture}

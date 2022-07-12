@@ -1,0 +1,30 @@
+%tag:000U
+%label:"con:polterovichSurgery"
+%author:JeffHicks
+%name:"Lagrangian connect sum "
+%type:"construction"
+
+We will now look at some ways to glue together new Lagrangian submanifolds from old.
+A source of inspiration for us will be from smooth topology, where tools such as surgery, Morse theory, and cobordisms provide methods for generating new manifolds.
+An example where we can take a method from topology and directly import it into symplectic geometry is connect sum for Lagrangian curves inside of surfaces.
+In this setting, two Lagrangian curves which intersect at a point are modified at the point of intersection to produce a connected Lagrangian submanifold.
+See \cref{fig:polterovichSurgery}.
+
+The Polterovich connect sum is a generalization of this surgery to higher dimensions, which smooths out a transverse intersection between two Lagrangian submanifolds. 
+The idea of construction is to take a  \snip{standard model for the transverse intersection}{lemma:straightening}, then construct a model neck in that canonical neighborhood. 
+\input{fig_polterovichSurgery}
+\input{prp_polterovichSurgery}
+\input{prf_polterovichSurgery}
+Th surgery construction does not uniquely specify \emph{the} Lagrangian surgery of two Lagrangian submanifolds,  different choices of curves $\gamma$ produce different Lagrangian submanifolds.
+Given a Lagrangian isotopy $\li_t: L\to C$ we associate \snip{flux cohomology class}{def:flux} $\Flux_{\li_t}\in H^1(L)$. 
+We can similarly associate a flux class to a Lagrangian surgery.
+A given surgery profile curve $\gamma$ can be extended to a family of Lagrangian surgery profiles by scaling the profile curve by a parameter $s$.  
+This gives us a family of surgeries $L_1\#_{s\gamma} L_2$, which are Lagrangian isotopic.
+The flux of the surgery is defined to be the flux of this isotopy. 
+\input{prp_fluxOfSurgery}
+The flux of $\gamma$ is the area bounded by $\gamma$ and the two axis. This is sometimes called the width or neck-width of the surgery.
+We will write $L_1\#_{\lambda}L_2$ a Lagrangian connect sum determined by a surgery profile curve with flux $\lambda$.
+
+The order of the summands plays an important role in Lagrangian surgery, as rarely are the Lagrangian $L_1\#L_2$ and $L_2\#L_1$ isotopic. 
+\input{exm_polterovichSurgery}
+

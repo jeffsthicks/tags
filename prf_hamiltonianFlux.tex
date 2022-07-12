@@ -1,0 +1,32 @@
+%label:"prf:hamiltonianFlux"
+%type:"proof"
+%name:"Hamiltonian flux"
+
+
+    We show one direction here, which is that  $\omega\left(\frac{d}{dt}\li_t,v\right)=dH_t(v)$ implies  $\Flux_{\li_t}$ vanishes in cohomology. 
+    Let $c:S^1\to L$ be any 1-cycle in $L$.
+    Parameterize a 2-chain $\li_t\circ c: S^1\times I \to X$ with coordinates $(\theta, t)$. 
+    The flux class applied to $c$ can be explicitly computed: 
+    \begin{align*}
+        \Flux_{\li_t}(c)=&\int_{\li_t\circ c}\omega
+         =\int_{I \times S^1} (\li_t\circ c )^* \omega\\
+        =&\int_I \int_{S^1} c^*\circ (\li_t)^* \omega
+         =\int_I \int_{S^1} (c^*  \iota_{\frac{d}{dt}\li_t}\omega ) dt\\
+        =&\int_I \left(\int_{S^1} (c^* dH_t) \right)dt
+         =\int_I \left(\int_{S^1} d(c^*H_t)\right) dt
+    \end{align*}
+    By Stoke's theorem, the integral of an exact form over the circle is zero. 
+   
+    For the reverse direction, fix a base point $x_0\in L$. 
+    For every point $x\in L$, pick a path $\gamma_x: [0,1]\to L$ with $\gamma_x(0)=x_0$ and $\gamma_x(1)=x$.
+    Define the function $H_t: L\to \RR$ by 
+    \[dH_t(x_1):=\int_{\li_t\circ \gamma} \omega.\]
+    Because the flux of the isotopy is zero, this integral does not depend on the choices of paths $\gamma_x$ and gives a well defined function on $L$.
+    We now show that this function generates the Lagrangian isotopy.
+    The vector field $\frac{d}{dt}\li_t$ is determined by the form $\iota_{\frac{d}{dt}\li_t}\omega$. 
+    Since $\iota_{\frac{d}{dt}\li_t}$ is closed,  
+    \begin{align*}
+        \int_{\gamma_x} \iota_{\frac{d}{dt}\li_t}\omega =& 
+    \end{align*}
+    \todo{We now check that this these two things match up by  computing the vector field.}
+

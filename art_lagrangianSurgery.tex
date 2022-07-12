@@ -4,43 +4,5 @@
 %name:"surgery of Lagrangian submanifolds "
 %type:"article"
 
-We will now look at some ways to glue together new Lagrangian submanifolds from old.
-A source of inspiration for us will be from smooth topology, where tools such as surgery, Morse theory, and cobordisms provide methods for generating new manifolds.
-An example where we can take a method from topology and directly import it into symplectic geometry is connect sum for Lagrangian curves inside of surfaces.
-In this setting, two Lagrangian curves which intersect at a point are modified at the point of intersection to produce a connected Lagrangian submanifold.
-See \cref{fig:connectsumcurve}.
-
-The Polterovich connect sum is a generalization of this surgery to higher dimensions, which smooths out a transverse intersection between two Lagrangian submanifolds. 
-The idea of construction is to first use \cref{lemma:straightening} to provide a canonical neighborhood for a transverse Lagrangian intersection, then construct a model neck in that canonical neighborhood. 
-\input{fig_polterovichSurgery}
-\input{prp_polterovichSurgery}
-\input{prf_polterovichSurgery}
-One feature of surgery is that it does not uniquely specify a Lagrangian --- different choices of curves $\gamma$ produce different Lagrangian submanifolds.
-Recall that to a Lagrangian isotopy $\li_t: L\to C$ we associate a cohomology class $\Flux_{\li_t}\in H^1(L)$. 
-We can similarly associate a flux class to a Lagrangian surgery.
-A given surgery profile curve $\gamma$ can be extended to a family of Lagrangian surgery profiles by scaling the profile curve by a parameter $s$.  
-This gives us a family of surgeries $L_1\#_{s\gamma} L_2$, which are Lagrangian isotopic.
-The flux of the surgery is defined to be the flux of this isotopy. 
-\input{prp_fluxOfSurgery}
-As a result, we will write $L_1\#_{\lambda}L_2$ for a curve where the profile curve $\gamma$, real axis and imaginary axis bound a region of area $\lambda$. 
-
-The order of the summands plays an important role in Lagrangian surgery, as it is generally the case that $L_1\#L_2$ and $L_2\#L_1$ are not Lagrangian isotopic. 
-\input{exm_polterovichSurgery}
-
-
-
-Now that we have a geometric description of $L_1\#_\lambda L_2$, we discuss what object it represents in the Fukaya category. We restrict ourselves to $\dim_\CC(X)=1$ so that we may draw pictures (but the construction works in higher dimensions as well).
-
-Let $L_0$ be some test Lagrangian, which intersects both $L_1$ and $L_2$ as in \cref{fig:roundingCorner}. If the surgery neck is chosen to lie in a neighborhood disjoint from the intersections  $L_0\cap (L_1\cup L_2)$, then these intersections are in bijection with the intersections $L_0\cap (L_1\# L_2)$.
-\input{fig_roundingCorner}
- The intuition from \cite{fukaya2007lagrangian} is that there is a bijection between certain holomorphic triangle with boundary on $L_0, L_1, L_2$ which passes through the intersection point $p_{12}$, and holomorphic strips with boundary on $L_0$ and $L_1\# L_2$. Since holomorphic triangles contribute to the $\emprod^3$ structure coefficients, and strips to the differential, it is reasonable to hope that we can state a relation between $L_1, L_2,$ and $L_1\#L_2$ as objects of the Fukaya category.
-
-
-First, we observe that the intersection point $p_{12}$ determines a morphism in $\hom(L_2, L_1)$. Since we've assumed that $L_1$ and $L_2$ intersect at only one point, we know that $\emprod^1(p_{12})=0$. We can therefore form the twisted complex $\cone(p_{12})$. We now provide justification for why this is isomorphic to $L_1\# L_2$.
-
-We have already observed that for our test Lagrangian $L_0$ we had an isomorphism of vector spaces between $\hom(L_0, L_1)\oplus \hom(L_0, L_2)$ and $\hom(L_0, L_1\#_{p_{12}}L_2)$. The differential on $\hom(L_0, L_1\#_{p_{12}}L_2)$ comes counting holomorphic strips, which we break into two types: those which avoid a neighborhood of the surgery neck, and those which pass through the surgery neck. 
-\input{prp_stripsInLagrangianSurgery}
-The more difficult portion is to understand the strips which pass through the neck.
-\input{thm_roundingCorner}
-From this we obtain the following corollary
-\input{cor_surgeryExactTriangle}
+\input{con_polterovichSurgery}
+\input{art_surgeryExactTriangle}
