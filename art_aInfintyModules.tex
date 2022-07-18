@@ -4,18 +4,21 @@
 %name:"The Category of modules over an $A_\infty$ category"
 %type:"article"
 
- Given $\mathcal C$ an $A_\infty$ category, there is a category of $\text{Mod}-\mathcal C$ (dg category of $A_\infty$-modules) which is triangulated.
+ Given $\mathcal A$ an $A_\infty$ category, there is a category of $\text{Mod}- \mathcal A$ (dg category of $A_\infty$-modules) which is triangulated. This means describing the objects, morphisms, and compositions of this category.
 
 \input{def_moduleOveraInfinityCategory}
+The sign $\clubsuit$ follows the \snip{$A_\infty$ algebra sign convention}{def:aInfinityAlgebra}:
+\[\clubsuit(\underline x,k_1):= k_1+\sum_{j=1}^{k_1} \deg(x_j).\]
+
 \input{exm_ringModule}
 \input{exm_zeroModule}
 \input{exm_yonedaModule}
 \input{def_morphismOfaInfinityModules}
 \input{def_categoryOfAInfinityModules}
 \input{prp_aInfinityModulesIsDG}
-One observes that $\mod-\mathcal A$ is in general a ``nicer'' category than $\mathcal A$, as it inherits many of the properties of the category of chain complexes.
+One observes that $\text{mod}-\mathcal A$ is in general a ``nicer'' category than $\mathcal A$, as it inherits many of the properties of the category of chain complexes.
 \input{prp_categoryOfAInfinityModulesIsTriangulated}
 \input{prf_categoryOfAInfinityModulesIsTriangulated}
-The Yoneda module construction (\cref{exm:yonedaModule}) gives a fully faithful contravariant functor $\mathcal A \to \mod-\mathcal A$.
-As the category $\mod-\mathcal A$ has mapping cones, this gives a triangulated envelope for $\mathcal A$.
+The Yoneda module construction (\cref{exm:yonedaModule}) gives a fully faithful functor $\mathcal A \to \text{mod}-\mathcal A$.
+As the category $\text{mod}-\mathcal A$ has mapping cones, this gives a triangulated envelope for $\mathcal A$.
 We therefore say that $A\to B \to C$ is an exact triangle in $\mathcal C$ if the image under Yoneda embedding is isomorphic to $A\to B \to \cone(f)$.

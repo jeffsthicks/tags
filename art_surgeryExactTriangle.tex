@@ -6,7 +6,7 @@
 
 
 
-Now that we have a geometric description of $L_1\#_\lambda L_2$, we discuss what object it represents in the Fukaya category. We restrict ourselves to $\dim_\CC(X)=1$ so that we may draw pictures (but the intuition works for higher dimensions as well).
+Now that we have a geometric description of $L_1\#_\lambda L_2$, we discuss what object it represents in the Fukaya category. We restrict ourselves to $\dim_\RR(X)=2$ so that we may draw pictures. However, the pictures are only for intuition (and in fact the sketch of proof we give only work when $\dim(X)\geq 4$).
 
 Let $L_0$ be some test Lagrangian, which intersects both $L_1$ and $L_2$ as in \cref{fig:roundingCorner}. If the surgery neck is chosen to lie in a neighborhood disjoint from the intersections  $L_0\cap (L_1\cup L_2)$, then these intersections are in bijection with the intersections $L_0\cap (L_1\# L_2)$. Therefore $\CF(L_0, L_1\# L_2)=\CF(L_0, L_1)[1]\oplus \CF(L_, L_2)$ as vector spaces.
 \input{fig_roundingCorner}
@@ -15,7 +15,7 @@ Let $L_0$ be some test Lagrangian, which intersects both $L_1$ and $L_2$ as in \
 
 First, we observe that the intersection point $p_{12}$ determines a morphism in $\hom(L_2, L_1)$. Since we've assumed that $L_1$ and $L_2$ intersect at only one point, we know that $\emprod^1(p_{12})=0$. We can therefore form the twisted complex $\cone(p_{12})$. We now provide justification for why this is isomorphic to $L_1\# L_2$.
 
-We have already observed that for our test Lagrangian $L_0$ we had an isomorphism of vector spaces between $\hom(L_0, L_1)\oplus \hom(L_0, L_2)$ and $\hom(L_0, L_1\#_{p_{12}}L_2)$. The differential on $\hom(L_0, L_1\#_{p_{12}}L_2)$ comes counting holomorphic strips, which we break into two types: those which avoid a neighborhood of the surgery neck, and those which pass through the surgery neck. 
+We have already observed that for our test Lagrangian $L_0$ we had an isomorphism of vector spaces between $\hom(L_0, L_1)\oplus \hom(L_0, L_2)$ and $\hom(L_0, L_1\#_\lambda L_2)$. The differential on $\hom(L_0, L_1\#_\lambda L_2)$ comes from counting holomorphic strips, which we break into two types: those which avoid a neighborhood of the surgery neck, and those which pass through the surgery neck. 
 \input{prp_stripsInLagrangianSurgery}
 The more difficult portion is to understand the strips which pass through the neck.
 \input{thm_roundingCorner}

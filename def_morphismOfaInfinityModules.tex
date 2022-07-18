@@ -5,7 +5,12 @@
 %type:"definition"
 %status:"incomplete"
   
-Let $M, N$ be $A_\infty$ modules. A  \emph{pre-morphism of $A_\infty$ modules} of degree $d$ is a collection of maps $f^{1|k-1}: A^{\otimes k-1}\otimes M\to N[d-k+1]$. The set of pre-morphisms, $\hom^\bullet(M, N)$ is a cochain complex whose differential is
-\[(m^1_{\hom^\bullet(M, N)} f)^{k-1, 1}\]
+Let $M, N$ be $A_\infty$ modules. A  \emph{pre-morphism of $A_\infty$ modules} of degree $d$ is a collection of maps $f^{1|k-1}: A^{\otimes k-1}\otimes M\to N[d-k+1]$. The set of pre-morphisms, $\hom^\bullet(M, N)$ is a cochain complex whose differential is (up to sign)
+\begin{align*}
+    (m^1_{\hom^\bullet(M, N)} f)^{1|k-1}:=&\sum_{j+j_2=k}(-1)^\diamondsuit m^{1|j_2}_{N|\mathcal A} (f^{1|j-1}\tensor \id^{\tensor j_2})\\&+
+    \sum_{\substack{j_1+j+j_2=k\\j_1>0}} (-1)^\diamondsuit f^{1|j_1+j_2}(\id^{\tensor j_1}\tensor m^j_{\mathcal A}\tensor \id^{\tensor j_1})\\
+    &+
+    \sum_{\substack{j_1+j+j_2=k\\j_1=0}} (-1)^\diamondsuit f^{1|j_2}(m^{1|j}_{M|\mathcal A}\tensor \id^{\tensor j_1}).
+\end{align*}
 
  
