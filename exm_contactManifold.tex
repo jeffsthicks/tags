@@ -9,14 +9,14 @@
     A key set of examples of contact manifolds come as hypersurfaces of symplectic manifolds. Let $(X, \omega)$ be a symplectic manifold. Suppose that there is an expanding vector field $Z$ on $X$, that is, a vector field so that 
     \[\mathcal L_Z \omega = \omega.\]
     The symplectic manifold $X$ is exact, with primitive given by $\lambda=\iota_Z \omega$.
-    Let $i:M\into  X$ be a hypersurface which is transverse to $X$. Then the restriction $\alpha:=\lambda|_M$ is an example of a contact form. We see that the form  
+    Let $i:M\into  X$ be a hypersurface which is transverse to $Z$. Then the restriction $\alpha:=\lambda|_M$ is an example of a contact form. We see that the form  
     \begin{align*}
         \alpha \wedge d\alpha^{n-1} =& i^* (\iota_Z \omega \wedge \omega^{n-1})\\
     \end{align*}
     is nonvanishing, as $\omega^n$ is a volume form and $Z$ is transverse to $M$.
 
-    The simplest example to consider come from $\CC^n= \RR^{2n}$, where the radial vector field $Z=\sum_i \left(x_i \partial_{x_i} + y_i\partial_{y_i}\right)$ provides an example of an expanding flow. The associated primitive for the symplectic form is 
-    \[\iota_Z \omega =\sum_{i=1}^n x_i dx_i - y_i dy_i \]
+    The simplest example to consider come from $\CC^n= \RR^{2n}$, where the radial vector field $Z=\frac{1}{2}\sum_i \left(x_i \partial_{x_i} + y_i\partial_{y_i}\right)$ provides an example of an expanding vector field. The associated primitive for the symplectic form is 
+    \[\iota_Z \omega =\sum_{i=1}^n x_i dy_i-y_idx_i \]
      This radial vector field plays especially nicely with respect to the moment map, 
     \begin{align*}
         p: \RR^{2n}\to& (\RR_{\geq 0})^n\\
@@ -24,7 +24,7 @@
     \end{align*}
     We give the base of the moment polytope $(\RR_{\geq 0})^n$ coordinates $(p_1, \ldots, p_n$).  
     At every point $(x_i, y_i)\in \RR^{2n}$, we can project the Liouville vector field to 
-    \[p_*Z_{(x_i, y_i)}= \sum_{i=1}^n (x_i^2+y_i^2) \partial_{p_i} =\sum_{i=1}^n  p_i \partial_{p_i}.\]
-    In particular, if we have a hypersurface $N\subset (\RR_{\geq 0})^n$ which is transverse to the radial vector field $\sum_{i=1}^n  p_i \partial_{p_i}$ and whose preimage $M:=p^{-1}(N)\subset \RR^{2n}$ is a smooth hypersurface, $M$ is a contact manifold.
+    \[p_*Z_{(x_i, y_i)}= \sum_{i=1}^n (x_i^2+y_i^2) \partial_{p_i} =\frac{1}{2}\sum_{i=1}^n  p_i \partial_{p_i}.\]
+    In particular, if we have a hypersurface $N\subset (\RR_{\geq 0})^n$ which is transverse to the radial vector field $\sum_{i=1}^n  p_i \partial_{p_i}$ and whose preimage $M:=p^{-1}(N)\subset \RR^{2n}$ is a smooth hypersurface, then  $M$ is a contact manifold.
     \label{exm:contactManifold}
     \input{fig_liouvilleMomentMapR2}

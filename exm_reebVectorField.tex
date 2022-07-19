@@ -6,20 +6,23 @@
 %parent:exm:contactManifold,exm:reebVectorField
 
 
-    We return to \cref{exm:contactManifold} of hypersurfaces in $\RR^{2n}$ given by $M=p^{-1}(N)$. Let $f(p_1, \ldots, p_n): (\RR_{\geq 0})^n\to \RR$ be the defining function for the hypersurface $N$. We give $\CC^n$ the polar coordinates $(r_i, \theta_i)$ so
-    \begin{align*}p_i=\frac{r_i^2}{2}=\frac{x_i^2+y_i^2}{2} && \partial r_i = \frac{x_i\partial_{x_i}+ y_i \partial_{y_i}}{\sqrt{x_i^2+y_i^2}}\\
-        \partial_{\theta_i}= x_i \partial y_i - x_i \partial x_i &&  r_i J \partial_{r_i} = \partial \theta_i
+    We return to \cref{exm:contactManifold} of hypersurfaces in $\RR^{2n}$ given by $M=p^{-1}(N)$. 
+    Consider the hypersurface $N$ defined by the equation $p_1+\cdots p_n=1$. Then $M=S^{2n-1}\subset \RR^n$.
+    We give $\CC^n$ the polar coordinates $(r_i, \theta_i)$. 
+
+    Let $f=\sum_{i=1}^n |z_i|^2.$ 
+    The tangent space to $M$ is the orthogonal complement to $\grad(f).$ Consider the vector field 
+    \[V:=\sum_{i=1}^n  x_i \partial_{y_i}- y_i \partial_{x_i}.\]
+    First, observe that 
+    \[V\cdot \grad(f)=\sum_{i=1}^n( x_i y_i - y_i x_i )= 0 \]
+    so $V$ restricts to a vector field on $M$. 
+    Let $v=\sum_{i}a_i \partial_{x_i}+b_i\partial_{y_i}$ be any vector in  $TM$. Then the pairing
+    \begin{align*}
+        \omega(v, V)=&\sum_{i=1}^n a_ix_i+b_iy_i\\
+        =&v\cdot \grad(f)=0
     \end{align*}
-    
-    At points $z\in M$, the tangent space $T_zM$ is identified with $\ker_z df\subset T_z\CC^n$. Using the standard metric, we can compute the gradient 
-    \[\grad f =\sum_{i=1}^n \frac{\partial f}{\partial p_i} (x_i\partial_{x_i} + y_i \partial_{y_i}) = \sum_{i=1}^n r_i \frac{\partial f}{\partial p_i} \partial_{r_i}
-    \]
-    We will check that 
-    \[V_\alpha:=  \frac{1}{(\grad f\cdot Z)} J \grad f = \sum_{i=1}^n \frac{\partial f}{\partial p_i} \partial_{\theta_i} \]
-    gives the Reeb vector field on $M$
-    Since $df(V_\alpha)=0$, $V_\alpha$ restricts to a vector field on $M$.
-    For any $v\in T_zM$, we have 
-    \[d\alpha(v, V_\alpha) = (\grad f\cdot Z) \omega(v, V_\alpha)=(\grad f\cdot Z)  \omega(v,  J\cdot \grad f)= df(v)=0.\]
-    so $V_\alpha\in \ker d\alpha$. Finally, we check that 
-    \[\alpha(V_\alpha)= \sum_{i=1} \frac{\partial f}{\partial p_i} (x_i dy_i - y_i dx_i)(x_i \partial y_i - x_i \partial x_i)  \]
-    \todo{need to finish}
+    From this, we conclude that $V\in \ker(d\alpha)$.
+    Finally, we have that $\alpha=\iota_Z\omega$, so 
+    \[\omega(Z, V)=\sum_{i=1}^n (x^2+y^2)=1\]
+    From which we conclude that $V$ is the Reeb vector field for $(M, \alpha)$.
+

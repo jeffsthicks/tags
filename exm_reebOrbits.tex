@@ -1,0 +1,14 @@
+%tag:000K
+%label:"exm:reebVectorField"
+%author:JeffHicks
+%name:"contact hypersurfaces"
+%type:"example"
+%parent:exm:contactManifold,exm:reebVectorField
+
+
+    We return to \cref{exm:reebVectorField} of the Reeb vector field on $(S^{n-1},\alpha)$, where $S^{n-1}$ is considered as a hypersurface of $\CC^n$. Recall we have a map $p:S^{2n-1}\to N$, where $N\subset \RR_{\geq 0}^n$ is the simplex defined by $\sum_{i=1}^n p_i^2=1$. The fibers of $p$ are $n$-dimensional tori in $S^{2n-1}$ which are parallel to the Reeb vector field $V_\alpha$. In fact, Reeb vector field $V_\alpha$ acts on the fibers $p^{-1}(p_1, \ldots, p_n)$ by translation in the $(\sqrt p_1, \ldots, \sqrt p_n)$ direction. We therefore identify two types of fibers of $p$:
+    \begin{itemize}
+        \item If $(\sqrt p_1, \ldots, \sqrt p_n)$ has integral slope (that is, there exists a scalar $r$ so that $r\cdot(\sqrt p_1, \ldots, \sqrt p_n) \in \ZZ^n$) then every point on the fiber belongs to a closed orbit.
+        \item Otherwise, no point on the fiber belongs to a closed orbit. 
+    \end{itemize}
+    The Reeb orbits of $(S^{n-1}, \alpha)$ are in bijection with $\bigoplus_{\vec v\in \NN^n\setminus \{0\}} T^n/\vec v$.
