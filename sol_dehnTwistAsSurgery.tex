@@ -25,7 +25,7 @@ Computing the gradient by orthogonal projection:
     \nabla_X H =& \nabla H - \left(\frac{\nabla f \cdot \nabla H}{|\nabla f|^2}\nabla f \right)\\
     =& \sum_{i=0}^n\left(y_i \partial_{y_i}- \frac{-|\vec y|^2}{|\vec x|^2+ |\vec y|^2}( x_i \partial_{x_i}- y_i \partial_{y_i})\right) \\
     =& \sum_{i=0}^n y_i\left(1- \frac{|\vec y|^2}{|\vec x|^2 +|\vec y|^2}\right) \partial_{y_i}+ \frac{x_i|\vec y|^2}{|\vec x|^2 +|\vec y|^2}\partial_{x_i}\\
-    \intertext{Declare $A= \frac{|\vec y|^2}{|x|^2+|\vec y|^2}$}
+    \intertext{Declare $A= |\vec y|^2/(|x|^2+|\vec y|^2)$}
     =& \sum_{i=0}^n \left(1- A\right)y_i\partial_{y_i}+ Ax_i\partial_{x_i}
 \end{align*}
 Multiplying through by $J$,
