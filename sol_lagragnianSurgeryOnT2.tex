@@ -1,0 +1,45 @@
+%tag:000Z
+%label:"sol:lagragnianSurgeryOnT2"
+%author:AlvaroMuniz
+%name:"Lagrangian surgery on $T^2$"
+%type:"solution"
+
+\begin{enumerate}
+    \item First we compute the generators of $CF^\bullet(L_{(a,b),\theta_1},L_{(c,d),\theta_2})$, i.e. the intersection points $L_{(a,b),\theta_1}\cap L_{(c,d),\theta_2}$. By translational invariance we may assume that $\theta_1=0$. Let now  $A\in SL(2,\ZZ)=Symp(\RR^2)$ be such that 
+    \(A\begin{pmatrix}
+    a\\
+    b
+    \end{pmatrix}=
+    \begin{pmatrix}
+    1\\
+    0
+    \end{pmatrix}\), which exists because $gcd(a,b)=1$. Then
+    \[
+    A \begin{pmatrix}
+    c\\
+    d
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    a & *\\
+    b & *
+    \end{pmatrix}^{-1}
+    \begin{pmatrix}
+    c\\
+    d
+    \end{pmatrix}
+    =\begin{pmatrix}
+    *\\
+    ad-bc
+    \end{pmatrix}
+    \]
+    and therefore \[L_{(a,b),\theta_1}\cap L_{(c,d),\theta_2}\cong L_{(a,b),0}\cap L_{(c,d),\theta_2-\theta_1}\cong L_{(1,0),0}\cap L_{(*,ad-bc),*}\] has precisely $ad-bc$ points. To conclude we note that the differential of the Floer cochain complex is trivial, as all the generators live in the same degree ($1$ or $0$, depending on whether $ad-cb\gtrless0$). Therefore
+    \[
+   \HF(L_{(a,b),\theta_1},L_{(c,d),\theta_2})=\ZZ^{ad-cb}
+    \]
+
+    
+    \item Since Lagrangian surgery preserves homology, we have $[L_0\# L_1]=[L_0]+[L_1]=(1,1)\in H_1(T^2;\ZZ)$, so $(a,b)=(1,1)$. One sees that the curve $L_{(1,1),\frac{1}{2}}$ is Lagrangian isotopic to $L_0\#L_1$ through a flux zero isotopy, giving the result. 
+    \item Note that discs lift to the universal cover $\RR^2$ of $T^2$. Here it is easy to visualize the potential triangles that would contribute to the given operations. An orientation argument shows these cannot be pseudo-holomorphic, so there are no triangles contributing to $m^2$.
+    \item The result no longer needs to hold true. For instance, for $L_2'=L_{(1,1),0}$ there is an infinite sequence of holomorphic discs with contributing to \[m^2(x_{01},x'_{12}),x'_{02}\], all of them with positive energy, thus $m^2(x_{01},x'_{12})\neq 0$.
+\end{enumerate}

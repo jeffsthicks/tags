@@ -1,0 +1,47 @@
+%tag:000Z
+%label:"sol:biranCornea3ended"
+%author:AlvaroMuniz
+%name:"surgery triangle from Lagrangian cobordism"
+%type:"solution"
+
+ 
+\begin{enumerate}
+    \item Let $d\theta_{X,\CC}=\omega_{X,\CC}$ be primitives of each symplectic form. By assumption we have $(\theta_{X}\oplus\theta_\CC) |_{K}=df$ for some smooth function $f:K\to \RR$.  Then $\theta_X|_{L_i}=d(\iota_{i}^*f)$, where $\iota_{i}:L_i\into K$ includes $L_i$ as a fiber over one of the ends. Indeed, for $v\in TL_i$ we have
+    \[
+    \theta_X (v)=(\theta_X\oplus\theta_{\CC})(v,0)=df(v,0)=(\iota_i^*(df))(v)=d(\iota_i^* f)(v)
+    \]
+    which proves that $\theta_X|_{L_i}=d(\iota_i^*f)$. 
+    
+    \item If $p\in (L\times\gamma^-)\cap K$, then $\pi_\CC(p)\in \pi_\CC(L\times\gamma^-)\cap \pi_\CC(K)=\set{z}$, so $(L\times\gamma^-)\cap K \cong L\cap L_2$ and these are precisely the generators of both vector spaces.
+    
+    \item By the choice of almost complex structure, the composition $p:=\pi_\CC\circ u:\RR\times[0,1]\to\CC$ is holomorphic. First of all note that $\text{Im}(p)$ must be bounded: the finite energy condition says that $u$ extends to a map $\tilde p:D\to \CC$ from the disc, which is compact and thus has compact --- in particular, bounded --- image. Now if $\text{Im}(p)\not\subset\set{z}=\text{Im}(\gamma^-)\cap \RR_{<<0}$, then $\text{Im}(p)\cap U\neq\emptyset$ for an open unbounded region $U\subset \CC\setminus(\gamma^-\cup \pi_\CC(K))$. Furthermore:
+    \begin{itemize}
+        \item $\tilde p(D)$ is compact and thus closed, so $\tilde p(D)\cap U=\text{Im}(p)\cap U$ is closed in $U$.
+        \item $p(\RR\times(0,1))$ is open by the open mapping theorem, thus $p(\RR\times(0,1))\cap U=\text{Im}(p)\cap U$ is open in $U$. 
+    \end{itemize}
+    We have a non-empty open and closed subset of $U$; as $U$ is connected, we conclude that $\text{Im}(p)\cap U=U$, which implies that $\text{Im}(p)$ contains the unbounded region $U$. This is a contradiction, so $\text{Im}(p)=\set{z}$.
+    
+    Now we know that all pseudoholomorphic strips with boundary on $L\times\gamma^-$ and $K$ --- which are precisely those contributing to the differential of $CF^\bullet(L\times\gamma^-,K)$ --- are of the form $u(s,t)=(v(s,t),z)$, where $v$ is a pseudoholomorphic strip in $X$ with boundary in $L$ and $L_2$ --- which are precisely those contributing to the differential of $CF^\bullet(L,L_2)$. Thus we have a bijection betweeen generators of $CF^\bullet(L\times \gamma^-,K)$ and $CF^\bullet(L,L_2)$, as well as between their pseudoholomorhic strips. 
+    
+    \item As a vector space, $CF^\bullet(L\times\gamma^+,K)=CF^\bullet(L,L_1)\oplus CF^\bullet(L,L_2)$ by the same argument as in part 2. We now have three types of pseudoholomorphic strips:
+    \begin{enumerate}
+        \item Those connecting two points in $CF^\bullet(L,L_1)$, which are encoded in the differential $\partial_{L,L_1}$.
+        \item Those connecting two points in $CF^\bullet(L,L_2)$, which are encoded in the differential $\partial_{L,L_2}$.
+        \item Those connecting  points in $CF^\bullet(L,L_1)$ with one in $CF^\bullet(L,L_2)$, which make use of the bounded region between $\gamma^+$ and $\pi_\CC(K)$. Call this map $f:CF^\bullet(L,L_1)\to CF^\bullet(L,L_2)$.
+    \end{enumerate}
+    Recalling the definition of a {\it mapping cone} of chain complexes, this says precisely that (up to grading considerations)
+    \[
+    CF^\bullet(L\times\gamma^+,K)=cone(CF^\bullet(L,L_0)\xrightarrow{f} CF^\bullet(L,L_1)).
+    \]
+    
+    \item By the previous part we have a long exact sequence
+    \[
+    \dots HF^{i-1}(L\times\gamma^+,K)\to HF^i(L,L_0) \to HF^i(L,L_1) \to HF^i(L\times\gamma^-,K) \to HF^{i+1} (L,L_0)\to\dots
+    \]
+    The Hamiltonian isotopy between $K\times\gamma^-$ and $L\times\gamma^+$ together with the invariance of Lagrangian Floer homology under Hamiltonian isotopy gives $HF^\bullet(L\times\gamma^+,K)\cong HF^\bullet(L\times\gamma^-,K)$, and by part 3 the latter is isomorphic to $HF^\bullet(L_2,K)$. Putting all together we get a long exact sequence
+    \[
+    \dots HF^{i-1}(L_2,K)\to HF^i(L,L_0) \to HF^i(L,L_1) \to HF^i(L_2,K) \to HF^{i+1} (L,L_0)\to\dots
+    \]
+    as required.
+    \end{enumerate}
+    
