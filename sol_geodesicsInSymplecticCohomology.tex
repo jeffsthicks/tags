@@ -1,0 +1,56 @@
+%tag:0013
+%label:"sol:geodesicsInSymplecticCohomology"
+%author:AlvaroMuniz
+%name:"geodesics and symplectic cohohomology of the cotangent bundle"
+%type:"solution"
+
+ 
+\begin{enumerate}
+    \item Let $G:TQ\to T^*Q$ be the isomorphism induced by $g$. Define $g^*:T^*Q\x T^*Q \to \RR$  as $g^*:=g\circ (G\inv\x G\inv)$. Note that in local coordinates $g^*_{ij}=g^{ij}$, where $(g^{ij})$ is the inverse of the local expression $(g_{ij})$ of $g$.
+    
+    Consider now the Hamiltonian $H(q,p):=g_q^*(p,p)$ on $T^*Q$. Write $g^*(p,p')=\sum_{i,j=1}^n g^*_{ij}p_i p'_j=\sum_{i,j=1}^n g^{ij}p_i p_j$ in local coordinates. We compute
+    \begin{align*}
+        V_g&=J\nabla H\\
+        &=J\nabla\left(\sum_{i,j=1}^n g^{ij}p_ip_j\right)\\
+        &=J\sum_{i,j=1}^n\left(\sum_{k=1}^n\fracpartial{g^{ij}}{q_k} p_ip_j\partial_{q_k}+2g^{ij}p_i\partial_{p_j}\right)\\
+        &=\sum_{i,j=1}^n\left(\sum_{k=1}^n\fracpartial{g^{ij}}{q_k} p_ip_j\partial_{p_k}-2g^{ij}p_i\partial_{q_j}\right)
+    \end{align*}
+    
+    \item Note the projected curve $\gamma=\pi_Q(\tilde\gamma)$ satisfies the differential equation $\dot\gamma_i=-2\sum_{j=1}^n g^{ij}p_j$ (equivalently, $p_i=-\frac{1}{2}\sum_{j=1}^n g_{ij} \dot \gamma_j$) and furthermore $\dot p_j=\sum_{k,l=1}^n \fracpartial{g^{lk}}{q_j}p_kp_l=\frac{1}{4}\sum_{k,l=1}^n\fracpartial{g_{kl}}{q_j}\dot\gamma_k\dot\gamma_l$. Therefore
+    \begin{align*}
+        \ddot\gamma_i&=-2\sum_{j=1}^n \left(\sum_{k=1}^n \fracpartial{g^{ij}}{q_k}p_j\dot\gamma_k+g^{ij}\dot p_j\right)\\
+        &=\sum_{j,k,l=1}^ng^{ij}\left(\fracpartial{g_{jl}}{q_k}\dot\gamma_l\dot\gamma_k-\frac{1}{2}\fracpartial{g_{kl}}{q_j}\dot\gamma_k\dot\gamma_l\right)\\
+        %&=\frac{1}{2}\sum_{j,k,l=1}^ng^{ij}\left(\fracpartial{g_{jk}}{q_j}\dot\gamma_l\dot\gamma_k+\fracpartial{g_{jl}}{q_k}\dot\gamma_l\dot\gamma_k-\fracpartial{g_{kl}}{q_j}\dot\gamma_k\dot\gamma_l\right)\\
+    \end{align*}
+    which is precisely the geodesic equation obtained from minimizing the action.
+    
+    
+    %In my paper computation I get that the geodesic equation is \begin{align*}
+        %\sum_{j=1}^ng_{ij}\ddot{\gamma_j}&=\sum_{j,k=1}^n(\frac{1}{2}\fracpartial{g_{jk}}{q_i}\dot\gamma_j\dot\gamma_k-\fracpartial{g_{ij}}{q_k}\dot\gamma_k\dot\gamma_j)\\
+        %&=\sum_{j,k=1}^n(\frac{1}{2}\fracpartial{g_{jk}}{q_i}\dot\gamma_j\dot\gamma_k-\frac{1}{2}\fracpartial{g_{ij}}{q_k}\dot\gamma_k\dot\gamma_j-\frac{1}{2}\fracpartial{g_{ik}}{q_j}\dot\gamma_k\dot\gamma_j)\\
+        %&=\sum_{j,k=1}^n \frac{1}{2}(\fracpartial{g_{jk}}{q_i}\dot\gamma_j\dot\gamma_k-\fracpartial{g_{ij}}{q_k}\dot\gamma_k\dot\gamma_j-\fracpartial{g_{ik}}{q_j}\dot\gamma_k\dot\gamma_j)
+    %\end{align*}
+    %so inverting we get
+    %$$
+    %\ddot\gamma_i=\frac{1}{2}\sum_{j,k=1}^n g^{ij}(...
+    %$$
+    
+    \item The second page of the spectral sequence is given by $E^2_{p,q}=H_p(S^n;H_q(\Omega S^n;\ZZ))\cong H_p(S^n;\ZZ)\otimes H_q(\Omega S^n;\ZZ)$, which is non-zero only for $p=0,n$. Note that since $PS^n$ is contractible the spectral sequence must converge to zero (except at the origin). Therefore:
+    \begin{itemize}
+        \item No differential can hit the terms $E^n_{0,i}\cong H_i(\Omega S^n;\ZZ)$ for $i=1,\dots,n-2$, thus they must vanish.
+        \item The edge homomorphisms $d^n:E^n_{n,q}\to E^n_{n,q+n-1}, q\geq0$ must be isomorphisms. This gives $H_i(\Omega S^n;\ZZ)\cong E^n_{n,i}\cong E^n_{0,i+n-1}\cong H_{i+n-1}(\Omega S^n;\ZZ)$, so that the first $n-1$ homology groups determine the rest. 
+    \end{itemize}
+    We conclude $H_*(\Omega S^n;\ZZ)\cong \ZZ[x]$ with $\abs x=n-1$ as required {\color{red} last part?}
+    
+    \item By the previous part, we now have $E^2_{p,q}=\ZZ$ for $p=0,n$ and $q=0,n-1,2(n-1),\dots$ and $0$ otherwise. In particular, the edge homomorphisms $d^n:E^n_{n,i}\to E^n_{0,i+n-1}, i=0,n-1,2(n-1),\dots$ are the only non-trivial differentials in the spectral sequence, so $E^{n+1}_{p,q}=E^\infty_{p,q}$.  These maps are endomorphisms of $\ZZ$ and thus given by multiplication by $k$, leaving only terms of the form $(E^{n+1}_{n,i},E^{n+1}_{0,i+n-1})=(\ZZ,\ZZ)$ if $k=0$ or $(E^{n+1}_{n,i},E^{n+1}_{0,i+n-1})=(0,\ZZ/k\ZZ)$ if $k\neq 0$ for the next --- and last --- page of the spectral sequence. Therefore, $\ZZ$ factors appear in pairs, and since $H_0(LS^n)=\ZZ$ there must be an odd-number of them, excluding the possibility that $H_*(LS^n)=\ZZ^2$. Lastly, note that since $H_0(LS^n)=\ZZ$, the first and second possibilities in the question are already excluded. {\color{red}We are obtaining the graded pieces of the filtration on homology. How to argue from these?}
+    
+    \item Let $H(q,p):=g^*_q(p,p)$ be the Hamiltonian used in part 1. Then $H$ can't have any non-constant periodic orbits, as otherwise their projection to $S^n$ would be  closed geodesics. {\color{red} Why does it have two constant orbits? In fact, isn't the whole zero section a critical submanifold? Do we have to use a perturbation of $H$ like in Exercise 0.4?} 
+    
+    If there existed a metric with no closed geodesics, then by the previous part the Hamiltonian Floer cochain complex $CF(H)$ would have only two generators. Denoting their degrees by $p$ and $q$, the possible scenarios are:
+    \begin{itemize}
+        \item If $\abs{p-q}=0$ or $\abs{p-q}\geq 2$, then there is no differential and $SH^\bullet(T^*S^n)\cong\ZZ^2$
+        \item If $\abs{p-q}=1$, then the differential is given by multiplication by $k$ for some $k\in \ZZ$, and we get $SH^\bullet(T^*S^n)=\ZZ^2$ if $k=0$ or $SH^\bullet(T^*S^n)=\ZZ/k\ZZ$ if $k\neq0$.
+    \end{itemize} 
+    Viterbo's theorem states that $SH^\bullet(T^*S^n)\cong H_{-\bullet}(LS^n)$, so all these cases contradict what was proven in part 4. Therefore such metric cannot exist.
+\end{enumerate}
+ 

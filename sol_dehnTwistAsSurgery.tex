@@ -5,8 +5,8 @@
 %type:"solution"
 
  
-
- Here, we write $X:=T^*S^n=\{(z_0, \ldots, z_n)\st \sum_{i=0}^n z_i^2=1\}$. Let $f:= \frac{1}{2}\Re\left(\sum_{i=0}^n z_i^2\right)$, and let $g=\frac{1}{2}\Im\left(\sum_{i=0}^n z_i^2\right)$. Then 
+\begin{enumerate}
+    \item Here, we write $X:=T^*S^n=\{(z_0, \ldots, z_n)\st \sum_{i=0}^n z_i^2=1\}$. Let $f:= \frac{1}{2}\Re\left(\sum_{i=0}^n z_i^2\right)$, and let $g=\frac{1}{2}\Im\left(\sum_{i=0}^n z_i^2\right)$. Then 
  \begin{align*}
     \nabla f = \sum_{i=0}^n x_i \partial_{x_i}- y_i \partial_{y_i} && \nabla g = \sum_{i=0}^n y_i \partial_{x_i} + x_i \partial_{y_i}.
  \end{align*}
@@ -29,6 +29,7 @@ Computing the gradient by orthogonal projection:
 Setting $A= |\vec y|^2/(|x|^2+|\vec y|^2)$ and multiply through by $J$ gives
 Multiplying through by $J$,
 \[V_H= \sum_{i=0}^n Ax_i \partial_{y_i} - (1-A)y_i \partial_{x_i}\]
+\item
 Let $(x_i(t), y_i(t))$ be a Hamiltonian flowline. Then 
 \begin{align*}
     x_i'=(1-A) y_i && y_i'=A x_i
@@ -49,8 +50,12 @@ Observe that $\vec a \cdot \vec b =0$, so
 \[|\vec y(t)|^2=(|\vec a|^2 + |\vec b|^2)\cdot A_0 = |\vec b|^2\]
 So, $A(y(t))$ is constant for these guessed solutions. From this we check that the guessed solutions are flowlines of $V_H$.
 
-Observer that at the boundary $|\vec b|=1$, and so  
+Observe that at the boundary $|\vec b|=1$, and so  
 \begin{align*}
     A_0=1/3 && B_0=2/9
 \end{align*}
  Therefore the time $3\pi \sqrt{2}$ flow of $V_H$ acts by mulitplication by $-1$ on the boundary of $X\cap \{(\vec x, \vec y) \st |\vec y|\leq 1\}$.
+
+
+
+\end{enumerate}
