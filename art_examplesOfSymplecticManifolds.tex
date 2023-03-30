@@ -1,0 +1,43 @@
+%tag:0007
+%label:"art:examplesOfSymplecticManifolds"
+%author:JeffHicks
+%name:"examples of symplectic manifolds "
+%type:"article"
+
+\input{exm_linearSymplecticSpace}
+\input{exm_symplecticSurface}
+\input{exm_ccStarCylinder}
+The most important example of symplectic manifold comes from physics, which is the historical origin of symplectic geometry. 
+\input{exm_symplecticCotangentBundle}
+In the physical literature, $T^*Q$ is called the ``phase-space'' which encodes both the position and momentum of a particle.
+The canonical symplectic form describes the natural pairing of momentum and velocity.
+There is also a coordinate-free description of $\omega$.
+ To do so, we first define a canonical 1-form  $\eta\in \Omega^1(T^*Q)$.
+Let $(q,p)\in T^*Q$ be a point, where the coordinates take values $q\in Q$ and $p\in T^*_qQ$.
+The map $\pi: T^*Q\to Q$ induces a map $\pi_*: T(T^*Q)\to TQ$. 
+The canonical 1-form is defined by its value on tangent vectors  $v\in T_{(q,p)}(T^*M)$
+\[\eta_{(q,p)}(v):=p(\pi_*(v)).\]
+This describes the pairing between the $Q$-component (velocity in the base) of $v$  and the momentum coordinate $p$. 
+From the canonical form, we obtain a coordinate-free definition of canonical symplectic form as 
+\[\omega=-d\eta.\] 
+Note that $\omega$ is not simply a closed 2-form, but rather an \emph{exact symplectic form. }  
+
+\snip{One can also prove}{art:weinstein} that the cotangent bundle serves as a general kind of local model for symplectic manifolds. 
+We've already seen the cotangent bundle appear in the examples of symplectic structures on $\RR^{2n}$ and $(\CC^*)^n$, which can be interpreted as the symplectic structures on the cotangent bundles $T^*\RR^n$ and $T^*T^n$ respectively. 
+This example also gives an example of how an almost complex structure and symplectic structure can interact.
+    Let $Q$ be a manifold equipped with a connection.
+    The tangent bundle of $Q$ comes with an almost complex structure.
+    With a choice of connection we obtain a splitting
+    \[T_{(q,v)}TQ= T_v (T_q Q)\oplus T_q Q\]
+    with an isomorphism $A: T_v(T_q Q)\to T_qQ.$
+    One can then construct an almost complex structure by taking the matrix 
+    \[J:=\begin{pmatrix} 0 & A\\ -A^{-1} & 0\end{pmatrix}: T_{(q,v)}TQ\to T_{(q,v)}TQ.\]
+    One can similarly (but not canonically) construct an almost complex structure for the cotangent bundle. 
+    Pick $g$ a metric for $Q$, which induces a bundle isomorphism between the tangent and cotangent bundle. 
+    Let $(q_1, \ldots, q_n, p_1, \ldots p_n)$ be local coordinates for $T^*Q$ chosen so that $\partial q_1, \ldots \partial q_n$ form an orthonormal basis at the origin and the coordinates $p_1, \ldots, p_n$ parameterize the linear coordinates determined by the basis $\{\iota_{\partial q_i}g\}$.
+    Then an almost complex structure is specified by 
+    \begin{align*}
+        J \partial q_i=\partial p_i && J\partial p_i = -\partial q_i.
+    \end{align*}
+    Note that the resulting almost complex structure depends on the choice of metric, which modifies the ``size'' of the cotangent fiber relative to the base. 
+    The metric $\omega(J, -)$ is then the standard induced metric on the cotangent bundle.

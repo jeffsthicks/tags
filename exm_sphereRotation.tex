@@ -1,0 +1,18 @@
+%label:"exm:sphereRotation"
+%type:"example"
+%name:"rotation of Sphere"
+
+
+    Consider $S^2=\{(x_0, x_1, x_2)\;|\;x_0^2+x_1^2+x_2^2=1\}$  equipped with the symplectic form agreeing with the standard metric induced from $\RR^3$.
+    Take the Hamiltonian 
+    \begin{align*}
+        H:S^2\to&\RR\\
+        (x_0,x_1,x_2)\mapsto& x_2
+    \end{align*}
+    as drawn in \cref{fig:hamiltonianOnSphere}.
+    Since Hamiltonian flow preserves the level sets of $H$, we know that the latitudinal slices are orbits under the action of the Hamiltonian flow. 
+    To show that the Hamiltonian flow uniformly rotates the sphere, consider the map  $\phi:S^2\setminus\{(0,0,1), (0,0,-1)\}\into S^1\times \RR\subset \RR^3$, where $S^1\times \RR=\{(x_0, x_1, x_2)\;|\; x_0^2+x_1^2=1\}$, and the embedding is given by the latitudinal projection.
+    This projection (the \emph{Gall-Peters} map projection) is area-preserving, and so $\phi$ is a symplectic embedding.
+    In these new coordinates, $\omega=d\theta\wedge dx_2$ and $H=x_2$. In the Gall-Peters' coordinates,   $V_H=\partial_\theta$. 
+    \input{fig_hamiltonianOnSphere}
+

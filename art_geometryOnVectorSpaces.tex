@@ -1,0 +1,27 @@
+%tag:0007
+%label:"art:geometryOnVectorSpaces"
+%author:JeffHicks
+%name:"Geometry on Manifolds "
+%type:"article"
+
+In the broadest sense, differential geometry is the study of smooth manifolds equipped with additional data fixing some ``geometry'' on the space. 
+Usually, this geometry is obtained by imposing some geometry of vector spaces onto the tangent space of a smooth manifold.
+\begin{example}
+    An inner product on a vector space $g: V\times V\to \RR$ determines a geometry on the vector space by specifying lengths and angles.
+    A \emph{Riemannian manifold} is a pair $(X, g)$ where $X$ is a smooth manifold and $g$ denotes a family of inner products 
+    \[g_p: T_pX\to T_pX\]
+    which vary smoothly on the parameter in $p\in X$. 
+    A Riemannian manifold has local notions of lengths and angles that determine geodesics, curvature, and volumes.
+    Many constructions in Riemannian geometry are determined locally, as there are no global obstructions to locally modifying the Riemannian metric.
+    However, Riemannian geometry posses some \emph{local invariants,} which means that neighborhoods of points are distinguishable from each other using invariants such a curvature.
+\end{example} 
+\input{def_complexVectorSpace}
+\input{def_almostComplexManifold}
+Symplectic geometry, when taken outside of its historical context, seems a bit artificially constructed. 
+\input{def_symplecticVectorSpace}
+\input{def_symplecticManifold}
+If Riemannian geometry yields a theory of lengths and complex geometry a theory of preferred right-angles, then symplectic geometry gives a theory of signed areas. 
+There is a certain notion of compatibility between these three kinds of geometry. For example, notice that an inner product also identifies right angles and areas. 
+\input{def_compatibleAlmostComplexStructure}
+Remarkably, having a symplectic structure is sufficient for the construction of a compatible  almost complex structure. 
+\input{prp_compatibleACS}

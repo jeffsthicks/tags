@@ -1,0 +1,14 @@
+%label:"def:flow"
+%type:"definition"
+%name:"flow"
+
+
+    Given a time-dependent vector field $V_t$,  the \emph{flow associated to $V$} is the function $\phi_t: X\times \RR\to X$ which
+    \begin{itemize}
+        \item for all $t$, $\phi_t:X\to X$ is a diffeomorphisms and;
+        \item is the identity at time 0 so that $\phi_0=\operatorname{id}_M$ and;
+        \item generates the vector field $V_t$ in the sense that 
+            \[(V_t)_p:=\frac{d}{ds}\phi_s(\phi^{-1}_t(p))|_{s=t}.\]
+    \end{itemize}
+    We say that \emph{$ V_t$ is the infinitesimal generator} associated to $\phi_t$. 
+

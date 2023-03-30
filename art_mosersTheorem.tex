@@ -1,0 +1,63 @@
+%tag:0007
+%label:"art:mosersTheorem"
+%author:JeffHicks
+%name:"local models for symplectic manifolds"
+%type:"article"
+
+In contrast to Riemannian geometry,  symplectic manifolds are ``locally symplectomorphic.''
+This means that one cannot distinguish two symplectic manifolds simply based on the symplectic geometry of a small neighborhood of a point. 
+In this section, we sketch a proof of this fact.
+\input{thm_moser1}
+
+\begin{proof}
+    Without loss of generality,  let $V_0=V_1$ and let $\phi_0$ be the identity. 
+    Let $\Omega_t=(1-t)\Omega_0+t\Omega_1$. 
+    We want to find $\{\phi_t\}$ with $\phi_t^*\Omega_t=\Omega_0$. 
+    We could equivalently describe such an isotopy $\phi_t$ by the vector field
+    \[V_t:=\left(\frac{d}{dt}\phi_t\right)\circ\phi_t.\]
+    Taking Lie derivatives,  we have the pullback condition is equivalent to  
+    \[\frac{d}{dt}(\phi_t^*\Omega_t)=\phi_t^*\left(\mathcal L_{V_t} \Omega_t+\frac{d}{dt}\Omega_t\right)\]
+    So we are looking for $V_t$ with $\mathcal L_{V_t}\Omega_t+\frac{d}{dt}\Omega_t=0$.
+    Simplifying further gives us 
+    \[
+        d\iota_{V_t}\Omega_t=-\frac{d}{dt}\Omega_t=\Omega_0-\Omega_1\]
+        By Stoke's theorem, the right term is exact as $\int_X\Omega_0=\int_X \Omega_1$. Therefore there exists some $n-1$ form $\eta$ so that
+        $d\iota_{V_t}\Omega_t=d\eta$.
+    So now we have to solve $\iota_{V_t}\Omega_t=\eta$. 
+    Since $\Omega_t$ is a volume form,  then there exists a $V_t$ satisfying this equation. 
+\end{proof}
+This tells us that symplectomorphisms of surfaces are boring because any diffeomorphism can be made into a symplectomorphism. 
+In fact, every isotopy of symplectic forms in the same cohomology can be realized by a family of symplectomorphisms. 
+\input{thm_moser2}
+\begin{proof}
+    Instead of finding $\phi_t$, we instead search for the vector $V_t$ generating the isotopy.
+    Because the symplectic form should be invariant under this isotopy, we obtain the following condition on $V_t$:
+    \begin{align*}  0=&\frac{d}{dt}(\phi_t^*\omega_t)=\phi_t^*\left(\mathcal L_{V_t}\omega_t+\frac{d}{dt}\omega_t\right)\\
+        =&\mathcal L_{V_t}\omega_t + \frac{d}{dt}\omega_t\\
+        =&d\iota_{V_t}\omega+\frac{d}{dt}\omega_t
+    \end{align*}
+    Since the cohomology class $[\omega_t]$ is constant,  the time derivative  $\frac{d}{dt}\omega_t$ is exact. Therefore there exists \footnote{Small technical remark: We need $\eta_t$ to depend smoothly on $t$, which can be achieved by using the Hodge decomposition.}  $\eta_t$ with $d\eta_t=\frac{d}{dt}\omega_t$.
+        This reduces our previous computation to
+    \begin{align*}
+        =&d\iota_{V_t}\omega_t+d\eta_t
+    \end{align*}
+    Since $\omega_t$ is nondegenerate,  there exists unique $V_t$ with $\iota_{V_t}\omega_t+\eta_t=0$. 
+\end{proof}
+
+We also have a relative version of the Moser theorem.
+\input{thm_relativeMoser}
+\begin{proof}
+    Let $\omega_t=(1-t)\omega_0+t\omega_1$ for $t\in [0, 1)$. Then $\omega_t$ is symplectic for all $t$ in a sufficiently small tubular neighborhood $N$ of $X$. We want to find $\phi_t$ with $\phi_t^*\omega_t=\omega_0$ for all $t$. Let $V_t=\frac{d}{dt}\phi_t\circ \phi_t$. Recall that 
+    \begin{align*}
+        \frac{d}{dt}(\phi_t^*\omega_t)=&\phi^*_t(\mathcal L_{V_t}\omega_t+(\omega_1-\omega_0))\\
+        =&\phi^*_t(di_{V_t}\omega_t+(\omega_1-\omega_0))
+    \end{align*}
+        Since $i^*\omega_0=i^*\omega_1$,  we have that $[\omega_0]=[\omega_1]\in H^2(N)$ . Then there exists $\eta$  such that $d\eta=\omega_0-\omega_1$ and $\eta(p)=0$ for all $p\in X$. 
+    \begin{align*}
+        =&\phi^*d(i_{V_t}\omega-\eta)
+    \end{align*}
+    Since $\omega_t$ is nondegenerate,  there exists unique vector field $V_t$ with $i_{V_t}\omega_t=\eta$. Since $\eta(p)=0$ for all $p\in X$,  it follows that $V_t(p)=0$ for all $p\in X$.
+    For this $V_t$ we have that $\frac{d}{dt}(\phi^*_t\omega_t)=0$. Therefore $V_t$ generates a family of diffeomorphism $\{\phi_t\}$ which are the identity on $X$ and defined on a neighborhood of $X$.
+\end{proof}
+The application of this theorem to symplectic geometry shows that there are no local invariants of symplectic manifolds. 
+\input{cor_DarbouxsTheorem}

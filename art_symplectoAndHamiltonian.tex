@@ -1,0 +1,68 @@
+%tag:0007
+%label:"art:symplectoAndHamiltonian"
+%author:JeffHicks
+%name:"Symplectomorphisms and Hamiltonian isotopies "
+%type:"article"
+
+In previous definitions, we've presented 
+\begin{itemize}
+    \item some diffeomorphic spaces (i.e. $T^*T^n$ and $(\CC^*)^n$) which should be considered the same as symplectic manifolds.
+    \item some spaces which are diffeomorphic (i.e. $S^2$ and itself) which can be equipped with clearly different symplectic structures (i.e. $\text{vol}_g$ and $\text{vol}_{2g}$).
+\end{itemize} 
+We now introduce an equivalence relation for symplectic structures on a manifold.
+\input{def_symplectomorphism}
+One property of the canonical symplectic structure on the cotangent bundle $T^*Q$ is that the symplectomorphism type of $T^*Q$ is only dependent on the diffeomorphism type of $Q$ \cite{da2001lectures}.
+Let $f: Q_1\to Q_2$ be a diffeomorphism. 
+Define the \emph{lift} of $f$ to be a map $f_\#: T^*Q_1\to T^* Q_2$ defined by
+\[f_\#(q,p)=(f(q),  ((df_q)^*)^{-1}p\]
+The lift plays well with the tautological 1-form, in the sense that if $\lambda_i$ is the tautological 1-form for $T^*Q_i$, then $(f_\#)^*\lambda_2=\lambda_1$. 
+    
+
+A particularly interesting type of symplectomorphism is one which arises as an isotopy. A symplectic isotopy is a smooth 1-parameter family of maps $\phi_t: X\times I\to X$ which for fixed values of $t$ give a symplectomorphism, and start at the identity (in the sense that $\phi_0=\operatorname{id}_X$). 
+These are examples of smooth isotopies and so they can equivalently be described as the flow of a time-dependent vector field.
+\input{def_flow}
+There is an equivalence between vector fields and flows.
+\input{thm_existenceOfFlow}
+One can check that a smooth isotopy $\phi_t$ is a symplectic isotopy by verifying that the symplectic form is preserved by the infinitesimal generator $V_t$.
+This yields an easy to check criterion.
+\input{prp_exactSymplecticHamiltonian}
+\begin{proof}
+    We prove the forward direction, using that $\phi^*_t\omega=\omega$ for all $t$.
+    By taking the derivative with respect to $t$ of both sides, we obtain:
+\begin{align*}
+    0=&\frac{d}{dt}\phi^*\omega
+    =\phi^*_t\mathcal L_{V_t}\omega
+\end{align*}
+Since $\phi$ is a diffeomorphism,  this is equivalent to the vanishing of $\mathcal L_{V_t}\omega$, 
+\begin{align*}
+ 0=& \mathcal L_{V_t}\omega
+\end{align*}
+Applying Cartan's formula, and using that $\omega$ is closed,
+\begin{align*}
+0=&d(\iota_{V_t}\omega)+ \iota_{V_t}(d\omega)=d(\iota_{V_t}\omega).
+\end{align*}
+This means that $\iota_{V_t}\omega$ is closed.
+\end{proof}
+One could ask for the stronger condition of exactness for the 1-form $\iota_{V_t}\omega$.
+In this case, we can describe vector field $V_t$ by a function on $X$. 
+\input{def_hamiltonianVectorField}
+The uniqueness of this vector field arises from the non-degeneracy of the symplectic form $\omega$.
+This additionally means that to every exact symplectic isotopy we can associate a generating Hamiltonian function.
+The Hamiltonian isotopies give a large set of easy-to-describe symplectic isotopies, and the relation between Hamiltonian isotopies and all symplectic isotopies has a nice interpretation in terms of the topology of $X$. 
+\begin{corollary}
+    If $H^1(X,  \RR)=0$,  then every symplectic isotopy is Hamiltonian. 
+\end{corollary}
+\input{exm_hamiltonsEquations}
+A notable feature of Hamiltonian flow $V_H$ is that it preserves the level sets of $H$, as 
+\[V_H(H)=dH(V_H)=\omega(V_H, V_H)=0.\]
+\input{exm_sphereRotation}
+The Hamiltonian flow is sometimes called the symplectic gradient. 
+In the setting where we have a compatible triple $(X, \omega,g, J)$, the Hamiltonian flow and gradient are related by the almost complex structure. 
+\input{lem_gradients}
+\begin{proof}
+    This is a direct computation. On any test vector $v$,
+    \begin{align*}
+        g(J V_H, v)=\omega(V_H, v)=dH(v)= g(\grad(H), v)
+    \end{align*}
+    Because $g$ is nondegenerate, $\grad(H)=JV_H$. 
+\end{proof}

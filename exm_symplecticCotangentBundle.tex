@@ -1,0 +1,13 @@
+%label:"symplecticCotangentBundle"
+%type:"example"
+%name:"symplectic structure on cotangent bundle"
+
+
+    Let $Q$ be a smooth $n$-dimensional manifold.
+    We now describe a canonical symplectic form on the cotangent bundle, $T^*Q$.
+    At every point $q\in Q$, there exists chart $q\in U\subset Q$ which we can parameterize with coordinates $(q_1, \ldots, q_n)$.
+    The cotangent bundle $T^*U$ inherits coordinates $(q_1, p_1, q_2, p_2, \ldots, q_n, p_n)$, where the $p_i$ linearly parameterize the fibers of the cotangent bundle in the direction of the basis element $dq_i$.
+    \footnote{ The letter $p$ is chosen for historical reasons. The form $dq_i$ is dual to the vector $\partial q_i$, which represents the velocity of a particle.     The dual to velocity is momentum, which was historically represented by the variable $\rho$.    Therefore, the momentum coordinates have been denoted by $p_i$.  } 
+    In these coordinates, the canonical symplectic form on this chart is:
+    \[\omega=\sum_{i=1}^n dq_i \wedge dp_i=-d(p dq).\]
+
