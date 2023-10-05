@@ -1,0 +1,23 @@
+%label:"art:tropicalGeometryIntroduction"
+%type:"article"
+%name:"a short introduction to tropical geometry"
+
+
+We first study the log map 
+\[
+\Log_t:= \log_t|-|: \CC\to \RR\cup\{-\infty\}
+\]
+where $t>1$. 
+and try to define a ``ring structure'' on $\RR\cup\{-\infty\}$ which makes this log map a homomorphism. 
+The first guess that one would take is to define 
+\begin{align*}
+    ``\times" \text{ given by the operation  } q_1 ``\times" q_2  = &\Log_t(\Log_t^{-1}(q_1) \cdot \Log_t^{-1}(q_2)) = x+y \\
+    ``+"    \text{ given by the operation } q_1 ``+" q_2  =    &\Log_t(\Log_t^{-1}(q_1) + \Log_t^{-1}(q_2))
+\end{align*}
+While the first operation is well defined, the second is not! In order to make this well defined we take the limit of the second equation as $t\to \infty$, from which we obtain 
+\[\lim_{t\to\infty} \Log_t(\Log_t^{-1}(q_1) + \Log_t^{-1}(y)) = \max(q_1, y).\]
+This gives us a definition for our new operations. 
+\input{def_tropicalSemifield}
+The goal is now to understand how algebraic geometry over $\CC$ relates to ``algebraic geometry'' over the semi-field $\TT$. The first thing to do it to exchange polynomials for tropical polynomials. For instance, given $f(z_1, z_2): \CC^2\to \CC$ a polynomial of two variables, we declare the tropicalization of the polynomial to be 
+\[f(z_1, z_2)=\sum a_{ij} z_1^iz_2^j \leftrightarrow \TropB(f)(q_1, q_2):= \max (a_{ij}+iq_1 + jq_2 )\]
+\input{exm_tropicalization}

@@ -1,0 +1,26 @@
+%label:"art:tropicalZeroSet"
+%type:"article"
+%name:"the zero locus of a tropical polynomial"
+
+
+The next question is to understand the zero set of a tropical function.  When $f$ is a polynomial, we have the associated variety $V(f):= \{q\st f(q)=0\}$. Na\"ively, one might try define the tropical zero set to be the set where $\TropB(f)=-\infty$ (as $-\infty$ is the tropical additive identity). However, it is clear to see that this will have no solutions. 
+\input{exm_tropicalamoeba}
+This mimics the following behavior. A tropical polynomial $\phi: \RR^n\to \RR$ by definition, is a convex piecewise integral affine function on $\RR^2$. We can associate to every such function the locus where $\phi$ where $\phi$ is not differentiable. This will be a union of polyhedra of dimension $n-1$.
+\input{def_tropicalzeroset}
+
+
+
+We now give some more details to the previous section. 
+\input{def_integralaffinefunction}
+\input{def_affinehalfspace}
+\input{def_rationalpolyhedron}
+\input{def_polyhedralcomplex}
+\input{fig_somePolyhedralComplexes}
+\input{lem_polyhedralsubdivision}
+Later, we will impose some additional criteria on these complexes:
+\begin{itemize}
+    \item Pure dimension $k$ --- every maximal cell is of dimension $k$,
+    \item ``Weighted'': there exists a weight function $\wt: \{\text{Maximal Cells}\} \to \ZZ$
+    \item ``Balanced'': for a weighted pure complex: every codimension 1 face $\tau$ is we have $\sum_{\sigma} \wt(\sigma) v_{\sigma/\tau}=0$ in $\RR^n /\span(\tau)$.
+\end{itemize}
+\input{def_tropicalkcycle}

@@ -1,0 +1,29 @@
+%label:"art:tropicalGeometryIntersectionIntroduction"
+%type:"article"
+%name:"a sketch of intersection theory"
+%parent:"art_tropicalGeometrySeminarOutline"
+
+
+
+Given $Z_k(\RR^n)$, the set of tropical $k$-cycles, has a group structure, whose additive structure is given by taking unions and subdividing. This also comes with a ring structure 
+\begin{align*}
+    Z_k(\RR^n)\otimes Z_l(\RR^n)\to \ZZ_{n+l-n}(\RR^n)\\
+    X\tensor Y \mapsto \lim_{\epsilon\to 0} (X\cap (T+\eps v))
+\end{align*}
+where is chose so that the intersection is transverse for all $\epsilon>0$ sufficiently small. 
+
+\input{fig_intersectionoftropicalcurves}
+
+The key step to proving that this ring structure is well defined is the moving lemma. 
+\input{lem_movinglemma}
+From this information, it is natural to define a tropical version of the Chow group. This means that we need a substitute for rational/algebraic/numerical equivalence. 
+\input{def_TropicalRationalfunction}
+
+\input{exm_tropicalrationalfunction}
+To a rational function $f$, we associate a tropical $(n-1)$ cycle in $\RR^n$. First, pick a minimal polyhedral subdivision $P$  of $\RR^n$ so that $\psi_\sigma$ is integral affine for every $\sigma\in P$. This is not uniquely determined. Then take the $(n-1)$ skeleton for this polyhedral structure; then assign weights. 
+\input{def_tropicalhodgeboundaries}
+We then can define :
+\begin{align*} 
+    CH_k(\RR^n):=Z_k/R_k \\
+      CH_k^b(\RR^n):= Z_k/R^b_k
+\end{align*}
