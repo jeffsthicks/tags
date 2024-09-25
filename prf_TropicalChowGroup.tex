@@ -1,0 +1,23 @@
+%label:"prf:TropicalChowGroup"
+%type:"proof"
+%name:"tropical chow group"
+%caption:""
+
+
+    Suppose that $P_1\sim^\RR P_2$. Then there exists $F\subset Q\times \RR$ with $F_{q_i}=P_i$. 
+
+    Take $R=F$, and define $\phi:=\pi^*\psi$. We see that $(\pi_Q)_* (\pi^*(\psi^*\psi)\cdot F)=P_1-P_2$. 
+
+    NOw suppose instead that $P_1\sim^b P_2$. Then there exists $R$ and $\phi\in \mathcal K_R$ such that $f_*(\div(\phi))=P_1-P_2$. 
+    Tke $F:=(f\times \id)_* (\text{graph}(\phi))$. Cruicially, the function $\phi$ is bounded so that the intersection with a sufficiently large slice is empty 
+    \[\begin{tikzpicture}
+
+        \draw (-1.5,0) -- (1.5,0);
+        \draw (-1.5,0.5) -- (-0.5,0.5) -- (0.5,2) -- (1.5,2);
+        \node at (2.5,0) {$R$};
+        \draw (-0.5,0.5) -- (-0.5,-0.5) (0.5,2) -- (0.5,-0.5);
+        \draw[dashed] (-1.5,-0.5) -- (1.5,-0.5);
+        \draw[dashed] (-1.5,3) -- (1.5,3);
+        \end{tikzpicture}
+    \]
+

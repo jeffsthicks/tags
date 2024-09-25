@@ -1,0 +1,38 @@
+%label:"art:BoundedRationalEquiavlenceInRrN"
+%type:"article"
+%name:"bounded rational equiavlence in $\RR^n$"
+%caption:""
+%parent:"art_TropicalChowGroupsII"
+
+
+\input{def_TropicallyNumericalEquivalenct}
+We say that $Q_1$ is numerically equivalent to $Q_2$ if $d_{Q_1}=d_{Q_2}$.
+\end{definition}
+Observe that if $Q_1\sim^b Q_2$, this is the same as saying that $Q_1-Q_2\sim^b 0$, which implies that $d_{Q_1}-d_{Q_2}=0$. It is natural to ask if the converse hold. We first understand the question locally, i.e. the intersection of fans. 
+\input{prp_DDeterminesAFan}
+\begin{corollary}
+    If $Q_1\sim^b Q_2$ are bounded equivalent fans, they are the same fan. 
+\end{corollary}
+The plan: 
+\begin{enumerate}
+    \item Associate to a cycle $Q$ a fan $Q'$,
+    \item Show that $Q\sim^b Q'$, 
+    \item use the previous results. 
+\end{enumerate}
+
+For the first part: Let $\sigma\subset \RR^n$ be the polyhedron. Define the recession cone 
+\[\text{Rec}(\sigma):= \{v\in \RR^ \st q+\RR_{\geq 0} v \subset \sigma \forall q\in \sigma\}\]
+For sufficiently fine polyhedral structure on $Q$, one can show that the $\text{Rec}(X):=\{\text{Rec}(\sigma), \sigma\in X\}$ comes with the structure of a balanced fan.  This essentially is just ``zooming out'' really far away from your variety. 
+\input{thm_CyclesAndRecessionCones}
+The main proof of the theorem is the following. 
+\input{prp_TropicalCyclesAsSums}
+\input{prf_TropicalCyclesAsSums}
+We obtain the proof of the theorem:
+\begin{align*}
+    \text{Rec}(Q)=& \text{Rec}(\sum Q_i + \vec v_i) \\
+    = &\sum \text{Rec}(Q_i + \vec v_i) = \sum Q_i \sim^b \sum Q_i+\vec v_i = Q
+\end{align*}
+In summary, the following are equivalent:
+\begin{align*}
+    Q_1\sim^b Q_2 && d_{Q_1} = d_{Q_2} && \text{Rec}(Q_1)= \text{Rec}(Q_2)
+

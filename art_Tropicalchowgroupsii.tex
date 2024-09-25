@@ -1,0 +1,32 @@
+%label:"art:Tropicalchowgroupsii"
+%type:"article"
+%name:"TropicalChowGroupsII"
+%caption:""
+%parent:""
+
+
+The goal of this note is to 
+\begin{enumerate}
+    \item Define tropical rational equivalence (this works in general, not just in $\RR^n$)
+    \item Study Chow group of $\RR^n$
+\end{enumerate}
+\input{def_TropicalPolyhedralComplex}
+\input{def_EquivalenceOfTropicalPolyhedralComplexes}
+\input{def_TropicalCartierDivisor}
+Recall that $\mathcal K^*_X$ is the ring of tropical rational function \cref{def:TropicalRationalfunction}.
+To each tropical Cartier divisor we can construct an associated Weil divisor: take the graph of $\phi$, which is a polyhedral complex; extend this to a balanced graph by adding in weighted edges going to the tropical boundary. 
+
+\input{fig_TropicalWeilDivisors}
+
+From now on, everything happens in $\RR^n$. A map $f: (Q\subset \RR^n)\to (P\subset \RR^m)$ is a morphism of cycles if it is a map of polyhedral complexes which preserves the affine structure. From this we obtain the following: 
+\input{prp_TropicalPullback}
+\input{prp_TropicalPushforward}
+\input{exm_TropicalPullbackAndPushforward}
+\input{prp_ProjectionFormula}
+\begin{definition}{stable intersection}
+    Let $X, Y$ be tropical intersection. The stable intersection is defined by $X\cdot Y=\lim_{\eps\to 0} X\cap (Y+\eps v)$ over all intersections of $X, Y+\eps v$ which are transverse. 
+\end{definition}
+Outside of the setting of $\RR^n$, it is not possible to define this intersection using this formula. We can define (generally) the intersection $\mathrm{Div}(\phi)\cdot Z$, but that is it. 
+\input{art_RationalEquivalenceInTropicalGeometry}
+\input{art_BoundedRationalEquiavlenceInRrN}
+\end{align*}

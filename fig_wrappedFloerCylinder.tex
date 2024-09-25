@@ -1,0 +1,26 @@
+%label:"fig:wrappedFloerCylinder"
+%author:JeffHicks
+%name:"Floer theory of zero section in $T^*S^1$"
+%type:"figure"
+%parent:"exm:wrappedFloerCylinder"
+%caption:"Computation of the wrapped Floer cohomology of the cotangent fiber with itself in $T^*S^1$."
+\begin{tikzpicture}
+    \begin{scope}[]
+    \draw[red] (-4,-0.5) .. controls (-3,-0.5) and (-3,1.5) .. (-2.5,1.5) .. controls (-2,1.5) and (-2,-0.5) .. (-1.5,-0.5) .. controls (-1,-0.5) and (-1,1.5) .. (-0.5,1.5) .. controls (0,1.5) and (0,-0.5) .. (0.5,-0.5) .. controls (1,-0.5) and (1,1.5) .. (2,1.5);
+    \fill[white, opacity=.7]  (-2.5,1.5) rectangle (-1.5,-0.5);
+    \fill[white, opacity=.7]  (-0.5,1.5) rectangle (0.5,-0.5);
+    \end{scope}
+    \draw  (-4,0.5) ellipse (0.5 and 1);
+    \draw  (2,0.5) ellipse (0.5 and 1);
+    \draw (-4,1.5) -- (2,1.5)  (-4,-0.5) -- (2,-0.5);
+    \draw[blue] (-3.5,0.5) -- (2.5,0.5);
+    
+    \node[circle, fill=black, scale=.2] at (-3.1,0.5) {};
+    \node[circle, fill=black, scale=.2] at (-1,0.5) {};
+    \node[circle, fill=black, scale=.2] at (1.05,0.5) {};
+    
+    
+    \node[below right] at (-3.1,0.5) {$x^{-1}$};
+    \node[below right] at (-1,0.5) {$e$};
+    \node[below right] at (1.05,0.5) {$x$};
+\end{tikzpicture}
