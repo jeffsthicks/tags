@@ -1,0 +1,22 @@
+%label:"fig:TropicalPairOfPantsPushforward"
+%type:"figure"
+%name:"tropical pair of pants pushforward"
+%caption:"Pushforward of a function to the tropical pair of pants"
+%parent:""
+
+
+    \begin{tikzpicture}
+
+
+        \draw (-0.5,0) -- (-2,0) (-0.5,0) -- (-0.5,-1.5) (-0.5,0) -- (0.5,1);
+        \draw (3.5,0) -- (6.5,0);
+        \draw  (-2,1) rectangle (0.5,-1.5);
+        \node (v1) at (-0.5,-2.5) {$\mathbb R^2$};
+        \node (v2) at (5.5,-2.5) {$\mathbb R$};
+        \draw[->]  (v1) edge node[fill=white]{$\begin{pmatrix}1& 1 \end{pmatrix}$} (v2);
+        \node at (4.5,1) {$(f_1)_*X=\{\{x\leq 0\}, \{0\}, \{x\geq 0\}\}$};
+        \node[fill, circle, scale=.2] at (5,0) {};
+        \draw[->] (5,0) -- (6,0);
+        \draw[->>] (5,0) -- (4.5,0);
+        \end{tikzpicture}
+

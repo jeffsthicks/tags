@@ -1,0 +1,17 @@
+%label:"fig:ALargeSliceIsEmpty"
+%type:"figure"
+%name:"a large slice is empty"
+%caption:"sufficiently large slices have empty intersection"
+%parent:"prf_CharacterizationOfBoundedRationalEquiavlence"
+
+
+        \begin{tikzpicture}
+
+            \draw (-1.5,0) -- (1.5,0);
+            \draw (-1.5,0.5) -- (-0.5,0.5) -- (0.5,2) -- (1.5,2);
+            \node at (2.5,0) {$R$};
+            \draw (-0.5,0.5) -- (-0.5,-0.5) (0.5,2) -- (0.5,-0.5);
+            \draw[dashed] (-1.5,-0.5) -- (1.5,-0.5);
+            \draw[dashed] (-1.5,3) -- (1.5,3);
+            \end{tikzpicture}
+
