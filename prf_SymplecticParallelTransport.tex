@@ -1,0 +1,22 @@
+%label:"prf:SymplecticParallelTransport"
+%type:"proof"
+%name:"symplectic parallel transport"
+%caption:""
+%parent:""
+
+
+    We first show that $\ker(\pi_*)$ is a symplectic subspace. 
+    Let $0\neq v\in \ker(\pi_*)$ be any tangent vector.
+    Since $\pi_*$ is $J$-holomorphic, $Jv\in \ker(\pi_*)$. 
+    We conclude that $\omega(v, Jv)=g(v, v)\neq 0$, and so $\omega$ is non-degenerate on the subspace $\ker(\pi_*)=T_zX$. 
+    It remains to show that the form is closed. 
+    Let $i:X_z\into X$ be and inclusion of a fiber of the Lefschetz fibration.
+    Then $di^*\omega= i^*d\omega =0$, so the $\omega|_{X_z}$ is a symplectic form on the fiber. 
+
+    We can construct a connection by picking a horizontal complement to the kernel of the projection. 
+    As $\ker(\pi_*)$ is a symplectic subspace, $(\ker(\pi_*))^{\omega\bot}$, its symplectic complement, is a complementary subspace in the sense that $\ker(\pi_*)\oplus (\ker(\pi_*))^{\omega\bot}=TX$. 
+    This is a choice of horizontal complement, defining a connection on this fiber bundle. 
+    In fact, the splitting of the tangent bundle locally splits the symplectic form. 
+\input{prp_LocalSymplecticFormInLefschetzFibration}
+
+\input{prf_LocalSymplecticFormInLefschetzFibration}

@@ -1,0 +1,16 @@
+%label:"prf:LocalSymplecticFormInLefschetzFibration"
+%type:"proof"
+%name:"local symplectic form in Lefschetz fibration"
+%caption:""
+%parent:""
+
+
+    Pick $p\in X$ a point, and tangent vectors  $(v_1, w_1), (v_2, w_2)\in T_pX=\ker(\pi_*)\oplus(\ker(\pi_*))^{\omega^\bot}.$ 
+    Because this these two spaces are symplectic orthogonal, $\omega_X(v_1, w_2)=0$ and $\omega_X(v_2, w_1)=0$. 
+    Since $v_1, v_2$ are tangent vectors to $X_p$, and symplectic forms on $\CC$ are all scalar multiples, there exists a function $f: X\to \RR$ yielding the decomposition
+    \begin{align*} 
+    \omega_X((v_1, w_1), (v_2, w_2))=&\omega_X((v_1, 0), (v_2, 0))+ \omega_X((0, w_1), (0, w_2)).
+    =&\omega_{X_p}(v_1, v_2)+f(p) \pi^*\omega_\CC(w_1, w_2)
+    \end{align*}
+
+

@@ -1,0 +1,17 @@
+%label:"prf:ParallelTransportOfLagrangianSubmanifold"
+%type:"proof"
+%name:"parallel transport of Lagrangian submanifold"
+%caption:""
+%parent:""
+
+
+    Let $\li_t:L\times \RR\to X$ be a parameterization of the submanifold $K$.
+    By reparameterization, it suffices to check that this is a Lagrangian submanifold at points $(p, 0)$. 
+    The tangent space $T_{(p, 0)}(L\times \RR)$ is spanned by vectors $\{\partial_{x_1}, \ldots, \partial_{x_{n-1}}, \partial_t\}$. 
+    Because $L$ is a Lagrangian of the fiber, and the fiber is a symplectic submanifold,
+    \[\li_t^*\omega(\partial_{x_i}, \partial_{x_j})=0.\]
+    Since $K$ was constructed via parallel transport, $(\li_t)_*\partial_t\in (\ker(\pi_*))^{\omega\bot}$. Since $L$ is a Lagrangian of the fiber, $(\li_t)_*\partial_{x_i}\in \ker(\pi_*)$.
+    Therefore, 
+    \begin{align*}\li_t^*\omega(\partial_{x_i}, \partial_{t})=0
+    \end{align*}
+

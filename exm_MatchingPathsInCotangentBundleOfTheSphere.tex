@@ -1,0 +1,28 @@
+%label:"exm:MatchingPathsInCotangentBundleOfTheSphere"
+%type:"example"
+%name:"matching paths in cotangent bundle of the sphere"
+%caption:""
+%parent:"art_lefschetzExpanded"
+
+
+    We continue our discussion of the sphere from \cref{exm:CotangentBundleOfASphere}. 
+    The Lefschetz fibration $\pi: T^*S^2\to S^2$ has two critical values, $\{-1, 1\}$, whose critical points corresponding to the north and south pole of the sphere. We now look at the thimbles drawn in \cref{fig:VanishingPathsForTheCotangentBundleOfTheSphere}.
+
+    The first example we consider is the Lagrangian thimble constructed from $\gamma(t)=-1-t$, the real negative ray with endpoint on the critical value of the south pole.
+    The symplectic parallel transport along $\gamma(t)$ is the negative gradient flow of the imaginary coordinate of $\pi(z_0, z_1, z_2)=z_2$ from the critical point $(0,0,1)$. 
+    The gradient flow of the imaginary coordinate is 
+    \begin{align*}
+        \grad_{T^*S^2}(\Im(z_2))=&\text{proj}_{T(T^*S^2)}\grad_{\CC^3}(\Im(z_2))\\
+        =&\langle 0, 0, 1 \rangle-  \cdot\frac{ \langle 0, 0, 1 \rangle\cdot \langle 2z_0, 2z_1, 2z_2 \rangle }{(2z_0)^2+(2z_1)^2+(2z_2)^2}\langle 2z_0, 2z_1, 2_2\rangle\\
+        =&  h(z_0, z_1, z_2)\langle 0, 0, 1\rangle
+    \end{align*}
+    For some function $h(z_0, z_1, z_2)$. 
+    The space $\{(ix_0, ix_1, 1+x_0^2+x_1^2)\}$ is a 2-dimensional Lagrangian subspace which contains $(0,0, 1)$ and is parallel to the $\grad_{T^*S^2}(\Im(z_2))$, and therefore the Lagrangian thimble over $\gamma(t)$. 
+    This also corresponds to the cotangent fiber above the south pole, $T^*_{sp}S^2$.
+    
+    In this example, we can also consider the path $\gamma(t)=1-2t$, which starts at the critical value for the south pole and ends at the critical value of the north pole. 
+    This is a matching path, and therefore there is a Lagrangian $S^2_{\gamma}\subset T^*S^2$ which lives above this path. 
+    The zero section of the sphere, given by $\{(x_0, x_1, x_2)\;|\; x_0^2+x_1^2+x_2^2=1, x_i\in \RR\}$ is a 2 dimensional submanifold of $T^*S^2$ which lies parallel to $\grad_{T^*S^2}(\Im(z_2))$.
+    The image of the zero section under $\pi$ is the curve $\gamma$, and the $S^2$ zero section clearly contains the north and south pole.
+    Therefore, the Lagrangian sphere associated to the mapping path $\gamma$ is exactly the zero section. 
+

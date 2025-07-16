@@ -1,0 +1,25 @@
+%label:"exm:CotangentBundleOfASphere"
+%type:"example"
+%name:"cotangent bundle of a sphere"
+%caption:""
+%parent:"art_lefschetzExpanded"
+
+
+    Another interesting piece of geometry comes from the cotangent bundle of the 2-sphere, which is a subvariety of $\CC^{3}$,
+    \[T^*S^2=\{(z_0, z_1, z_2)\;|\; z_0^2+z_1^2+z_2^2=1\}\]
+    We check that this has the topology of the tangent bundle.
+    Let $S^2=\{(x_0, x_1, x_2)\;|\; x_0^2+x_1^2+x_2^2=1\}\subset \RR^3$. 
+    The tangent bundle is then described by the pairs 
+    \[T^*S^2:=\{(x_0, x_1, x_2, y_0, y_1, y_2)\;|\;x_0^2+x_1^2+x_2^2=1, \sum_{i=0}^2 x_iy_i=0 \}.\]
+    These two constraints can be rephrased in terms of the real and imaginary components of $z_0^2+z_1^2+z_2^2=1$. 
+    The complex structure on this cotangent bundle interchanges the $x_i$ base directions with the $y_i$ tangent bundle directions.
+    The symplectic Lefschetz fibration that we consider for the cotangent bundle of the sphere sends 
+    \begin{align*}
+        \pi: T^*S^2\to \CC\\
+        (z_0, z_1, z_2)\mapsto z_2
+    \end{align*}
+    The fibers of this function are the conics 
+    \[\pi^{-1}(z)=\{(z_0, z_1, z_2)\;|\; z_2=z, z_0^1+z_1^2=1-z_2^2\}\]
+    which are regular, provided that $z_2\neq \pm 1$. 
+\input{fig_LefschetzFibrationForCotangentBundleOfASphere}
+

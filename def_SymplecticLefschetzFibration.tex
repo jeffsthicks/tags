@@ -1,0 +1,22 @@
+%label:"def:symplecticLefschetzFibration"
+%author:JeffHicks
+%name:"symplectic lefschetz fibration"
+%type:"definition"
+%parent:"art_Lefschetz"
+%source:"seidel2008fukaya"
+
+\begin{definition}
+    Let $(X, \omega , J)$ be a symplectic manifold equipped with compatible almost complex structure.
+    A \emph{symplectic Lefschetz fibration} is map $\pi: X\to \CC$ satisfying the following properties:
+    \begin{itemize}
+        \item $\pi$ is $J$-holomorphic, in the sense that $J\pi_*=\pi_*\jmath$, where $\jmath$ is the standard complex structure on $\CC$;
+        \item The map $\pi$ has finitely many critical points;
+        \item The set of critical values $\{\pi(x)\;|\;z\in \Crit(\pi)\}$ are disjoint and;
+        \item In a neighborhood of each critical point, there exists holomorphic coordinates $(z_1, \ldots, z_n)$ for $X$ so that $\pi=\sum_{i=1}^n z_i^2$. 
+    \end{itemize}
+    If the map $\pi$ is not proper (i.e. the fibers are allowed to be non-compact,) then we impose the additional requirement:
+    \begin{itemize}
+        \item There exists a compact set $X_0\subset X$ so that $\pi:X_0\to \CC$ is a proper fibration and;
+        \item The fibration $\pi:X\setminus X_0\to \CC$ is a trivial symplectic fibration, with split complex and symplectic structure. 
+    \end{itemize}
+\end{definition}

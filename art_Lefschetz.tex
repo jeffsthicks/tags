@@ -1,0 +1,84 @@
+%label:"art:IntroductionToLefschetz"
+%type:"article"
+%name:"introduction to Lefschetz fibrations in symplectic geometry"
+%caption:""
+%parent:""
+
+
+We now explore Lagrangians $K\subset X$, where we have a projection $:X\to \CC$. 
+
+\input{def_SymplecticLefschetzFibration}
+
+Note that $\pi: X\times \CC\to \CC$, the setting considered for \snip{Lagrangian cobordisms}{def_lagrangianCobordism}, trivially satisfies these criterion. 
+A symplectic Lefschetz fibration is the symplectic geometry equivalent to a manifold equipped with a Morse function.
+The basic model that we consider is a function which models the neighborhood of a critical point.
+
+\input{exm_LocalModelOfASingularity}
+\input{fig_ModelLefschetzSingularity}
+\input{exm_CotangentBundleOfASphere}
+\begin{remark}
+    One slightly confusing piece of notation in symplectic geometry is that the tangent bundle of $\CP^1$ is usually equipped with a different symplectic form that the cotangent bundle $T^*S^2$.
+    This is because $T\CP^1$ is usually considered with the symplectic form which makes $\CP^1$ a symplectic, rather than Lagrangian submanifold.
+    This can also be constructed as the symplectic blowup of $\CC^2$ at the origin.
+    This also comes with a projection to $\CC$, by first considering the blowdown map $T\CP^1\to \CC^2$, and then composing with the fibration considered in \cref{exm:LocalModelOfASingularity}.
+    This is not a Lefschetz fibration, as the critical fiber above zero contains 2 critical points.
+\end{remark}
+The existence of a \emph{symplectic parallel transport map} across the fibers of a Lefschetz fibration allows us to carry over many of the constructions which we considered for Lagrangian cobordisms to Lefschetz fibrations.
+\input{prp_SymplecticParallelTransport}
+\input{prf_SymplecticParallelTransport}
+
+
+    We now show that parallel transport is a symplectomorphism of the fibers.
+    This is done by computing the vertical component of the Lie derivative of $\omega$. 
+    Let $v\in \ker(\pi_*)^{\omega \bot}$ be a horizontal vector. 
+    Then 
+    \[\mathcal L_{v \omega}=d\iota_v \omega\]
+    We note that $\iota_v\omega$ vanishes on vertical vectors.
+    Therefore, $d\iota_v\omega$ vanishes on pairs of vertical vectors, and so the vertical component of the Lie derivative of $\omega$ is zero. 
+    This allows us to make the following definition.
+\input{def_SymplecticParallelTransportMap}
+    Finally, we prove that the autosymplectomorphism of the fiber taken by small loops are Hamiltonian isotopies. .
+    Suppose that we have a family of loops $\gamma_s:[0,1]_s\times [0,1]_t\to \CC$ with $\gamma_s(0)=\gamma_s(1)=\gamma_1(t)=z$.
+    This gives us a family of maps $i_\gamma^t: X_z\into X$  and a symplectomorphisms $\phi_{s, 1}: X_z\to X_z$. 
+    Let $c:S^1\to X_{z}$ represent a class in $H_1(X_z)$, and consider the flux $\int_{\phi_{s, 1}\circ c}\omega|_{X_z}$. 
+    We can write this chain as the boundary of a 3 chain, 
+    \[c\times [0, 1]_s\times\{t=1\}\cup c\times [0, 1]_s\times \{t=0\}\cup c\times \{0\}_s \times [0, 1]_t\cup c\times \{1\}_s\times [0, 1]_t=\partial (c\times [0, 1_s]\times [0, 1]_t)\]
+    This allows us to replace the flux integral with 
+    \begin{align*}
+        0=&\int_{i_\gamma^t\circ c} d\omega = \int_{\partial(i_\gamma^t\circ c)}\omega\\
+        =& \int_{i{s, 1}\circ c}\omega-\int_{i{s, 0}\circ c}\omega+\int_{i{1, t}\circ c}\omega-\int_{i_{0, t}\circ c}\omega
+        \intertext{The first term is an integral restricted to the fiber $X_z$, so we may replace $\omega$ with $\omega|_{X_z}$. The second term and fourth term are  zero as the map is constant. }
+        =& \int_{i{s, 1}\circ c}\omega|_{X_z}+\int_{i{1, t}\circ c}\omega\\
+        \intertext{In the last term $\frac{d}{dt}i_{1, t}\circ c$ lies in the horizontal tangent space, and $\frac{d}{d\theta} i_{1,t}\circ c$ lies in the vertical tangent space. Therefore $\omega$ vanishes on $T(i_{1, t}\circ c)$ }
+        =&\int_{i{s, 1}\circ c}\omega|_{X_z}= \Flux_{i_{s, 1}}(c).
+    \end{align*}
+\end{proof}
+\input{prp_ParallelTransportOfLagrangianSubmanifold}
+\input{prf_ParallelTransportOfLagrangianSubmanifold}
+\input{fig_ProductTorus}
+
+\input{fig_ChekanovTorus}
+When we have a curve $\gamma: \RR\to \CC$ which avoids the critical values, and a Lagrangian submanifold $L\subset X_{\gamma(0)}$, we will abuse notation and denote the parallel transport of $L$ along $\gamma$ by $L\times \gamma$. 
+\input{exm_LagrangiansGivenBySymplecticParallelTransport}
+A Lefschetz fibration $\pi: X\to \CC$ equips $X$ with two Hamiltonian flows: the real and imaginary coordinates of the complex parameter. 
+
+\input{lem_GradientOfRealPartInLefschetzFibration}
+\input{prf_GradientOfRealPartInLefschetzFibration}
+\input{prp_LocelModelOfThimble}
+\input{prf_LocelModelOfThimble}
+\input{exm_LagrangianThimble}
+Note that $\pi(W^-_p)$ is a ray emerging from $\pi(p)$ and heading in the positive real direction. 
+Let $z$ be in the interior of $\pi(W^-_p)$. 
+Then $\pi^{-1}(z)\cap W^-_p$ is a Lagrangian sphere $S^{n-1}\subset \pi^{-1}(z)$. 
+More generally, one can take any path $\gamma\subset \CC$ with left end on a critical endpoint to determine a Lagrangian sphere in the fiber. 
+Note that the map  $(\phi_\gamma^{t_0})^{-1}: X_{\gamma(t_0)}\to X_{\gamma(0)}$ is still a well defined map. 
+One can check that  $(\phi_{\gamma}^{t_0})^{-1}(z)\subset X_{\gamma(0)}$ is a Lagrangian sphere in the fiber. 
+\input{def_LagrangianThimble}
+Sometimes, a sphere in the fiber is the vanishing cycle of more than one critical point.
+If $\gamma_1, \gamma_2$ are two paths so that $S^{n-1}_{\gamma_1}=S^{n-1}_{\gamma_2}$, whose concatenation $\gamma=\gamma_1\cdot \gamma_2^{-1}$ is a smooth path, we call $\gamma$ a \emph{matching path} for the critical values $\gamma_1(0)$ and $\gamma_2(0)$. 
+When we have a matching path, we can construct a Lagrangian sphere by gluing the corresponding thimbles together at their mutual vanishing cycle boundary.
+\input{exm_MatchingPathsInCotangentBundleOfTheSphere}
+\input{fig_VanishingPathsForTheCotangentBundleOfTheSphere}
+These collections are useful, because Lagrangian spheres can be used to construct symplectomorphisms.
+
+
